@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProjectCard from '../Cards/ProjectCard';
+import SkillCard from '../Cards/SkillCard';
 import githubLogo from '../components/images/github-logo.png';
 import linkLogo from '../components/images/link.png';
 import externalLinkLogo from '../components/images/external-link.png';
@@ -195,71 +196,210 @@ function SkillsAndProjects() {
     // Add more projects here
   ];
 
-  
+
   const filteredProjects = filter ? projects.filter(project => project.id === filter) : projects;
 
   return (
     <>
 
-    <section id="SkillsAndProjects1">
-    <div className="skills-text-main-div">
-        <h1 className="gradient-text">Skills</h1>
-    </div>
-    </section>
-    <section id="SkillsAndProjects">
-      <div className="skills-text-main-div">
-        <h1 className="gradient-text">PROJECTS</h1>
+      <section id="SkillsAndProjects1">
+        <div className="skills-text-main-div">
+          <h1 className="gradient-text">Skills</h1>
+        </div>
+      </section>
+      <div class="grid grid-cols-6 gap-4 pl-5">
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+        <div>
+        <SkillCard
+                title={"C++"}
+                link={"jo"}
+                imgSrc={java}
+              />
+        </div>
+
+        
       </div>
 
-      <div className="skills-switch-div">
-        <div className="btn-group btn-group-toggle" data-toggle="buttons" >
-          <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white " onClick={() => handleFilterChange("Web Development")}>
-            <div id='webdev-pro' className="container">
-              <span className="react-logo">
-                <span className="nucleo"></span>
-              </span>
-            </div>
-          </button>
-          <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
-            <img id='machineLearning-pro' src={machinelearninglogo} alt="Machine-Learning" />
-          </button>
-          <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
-            <img id='android-pro' src={blockchainlogo} alt="Blockchain" />
-          </button>
-          <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("miscellaneous")}>
-            <img id='android-pro' src={idealogo} alt="idea" />
-          </button>
-        </div>
-      </div>
 
-      {filter && (
-        <div className="text-center mt-4 mb-2">
-          <h2 className="text-4xl font-bold">{filter.toUpperCase()}</h2>
-        </div>
-      )}
 
-      <div className='project-card-super grid grid-cols-3 gap-5'>
-        {filteredProjects.map((project, index) => (
-          <div key={index}>
-            <ProjectCard
-              title={project.title}
-              desc={project.desc}
-              link={project.link}
-              imgSrc={project.imgSrc}
-              alt={project.alt}
-              ts1={project.ts1}
-              wts1={project.wts1}
-              ts2={project.ts2}
-              wts2={project.wts2}
-              ts3={project.ts3}
-              wts3={project.wts3}
-              ts4={project.ts4}
-              wts4={project.wts4}
-            />
+
+
+
+
+
+
+      <section id="SkillsAndProjects">
+        <div className="skills-text-main-div">
+          <h1 className="gradient-text">PROJECTS</h1>
+        </div>
+
+        <div className="skills-switch-div">
+          <div className="btn-group btn-group-toggle" data-toggle="buttons" >
+            <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white " onClick={() => handleFilterChange("Web Development")}>
+              <div id='webdev-pro' className="container">
+                <span className="react-logo">
+                  <span className="nucleo"></span>
+                </span>
+              </div>
+            </button>
+            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
+              <img id='machineLearning-pro' src={machinelearninglogo} alt="Machine-Learning" />
+            </button>
+            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
+              <img id='android-pro' src={blockchainlogo} alt="Blockchain" />
+            </button>
+            <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("miscellaneous")}>
+              <img id='android-pro' src={idealogo} alt="idea" />
+            </button>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+
+        {filter && (
+          <div className="text-center mt-4 mb-2">
+            <h2 className="text-4xl font-bold">{filter.toUpperCase()}</h2>
+          </div>
+        )}
+
+        <div className='project-card-super grid grid-cols-3 gap-5'>
+          {filteredProjects.map((project, index) => (
+            <div key={index}>
+              <ProjectCard
+                title={project.title}
+                desc={project.desc}
+                link={project.link}
+                imgSrc={project.imgSrc}
+                alt={project.alt}
+                ts1={project.ts1}
+                wts1={project.wts1}
+                ts2={project.ts2}
+                wts2={project.wts2}
+                ts3={project.ts3}
+                wts3={project.wts3}
+                ts4={project.ts4}
+                wts4={project.wts4}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
 
 
 

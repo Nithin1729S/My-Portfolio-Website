@@ -9,7 +9,7 @@ function Navbar(props) {
         <ul className="nav nav-pills col col-sm-3 col-md-6 col-lg-5 justify-content-center">
           <li className="nav-item ">
           <div className='Home'>
-            <a className="nav-link link-dark" href={props.HomeId}>
+            <a className="nav-link link-dark" href={"/"}>
               <span className="border border-dark">Resume</span>
             </a>
             </div>

@@ -7,6 +7,7 @@ import haleLogo from '../components/images/HALE.png';
 function Experience() {
   return (
     <section id='Experience' className='exp-card-sec'>
+        
     <div className='exp-card-div'>
         
         {/* <ExpCard 
