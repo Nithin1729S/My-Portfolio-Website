@@ -9,18 +9,20 @@ import index from '../index.css';
 function App() {
   return (
     <div>
-        <Home />
-        <Navbar 
-        NavbarId = "#Navbar"
+      <Home />
+      <Navbar
+        NavbarId="#Navbar"
         HomeId='#Home'
-        SkillsAndProjectsId='#SkillsAndProjects'
+        SkillsId='#SkillsAndProjects1'
+        ProjectsId='#SkillsAndProjects'
         ExperienceId='#Experience'
         ContactMeId='#ContactMe'
-        />
-        <SkillsAndProjects /> 
-        <Experience />
-        <ContactMe />
-        
+      />
+      <div style={{ marginTop: '500px' }}>
+        <SkillsAndProjects />
+      </div>        <Experience />
+      <ContactMe />
+
     </div>
   );
 }

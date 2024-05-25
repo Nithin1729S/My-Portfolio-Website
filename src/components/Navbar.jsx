@@ -15,8 +15,13 @@ function Navbar(props) {
             </div>
           </li>
           <li className="nav-item ">
-            <a className="nav-link link-dark" href={props.SkillsAndProjectsId}>
-            <span className="border border-dark">SKILLS AND PROJECTS</span>
+            <a className="nav-link link-dark" href={props.SkillsId}>
+            <span className="border border-dark">SKILLS</span>
+            </a>
+          </li>
+          <li className="nav-item ">
+            <a className="nav-link link-dark" href={props.ProjectsId}>
+            <span className="border border-dark">PROJECTS</span>
             </a>
           </li>
           <li className="nav-item ">

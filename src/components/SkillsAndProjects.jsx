@@ -24,7 +24,7 @@ function SkillsAndProjects() {
 
   const projects = [
     {
-      id: "webdev",
+      id: "Web Development",
       title: "webdev1",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
@@ -38,7 +38,7 @@ function SkillsAndProjects() {
       wts3: "firebase"
     },
     {
-      id: "ml",
+      id: "machine learning",
       title: "ml1",
       desc: "Performed Sentiment Analysis on Covid-19",
       link: "https://docs.google.com/document/d/1c1YdVv_EwczIVUHz0x3YKcf7-zOtPTfOO3hjqqB0ZiE/edit?usp=sharing",
@@ -66,7 +66,7 @@ function SkillsAndProjects() {
       wts4: "react"
     },
     {
-      id: "webdev",
+      id: "Web Development",
       title: "wd2",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
@@ -80,7 +80,7 @@ function SkillsAndProjects() {
       wts3: "firebase"
     },
     {
-      id: "ml",
+      id: "machine learning",
       title: "ml2",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
@@ -108,7 +108,7 @@ function SkillsAndProjects() {
       wts3: "firebase"
     },
     {
-      id: "webdev",
+      id: "Web Development",
       title: "wd3",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
@@ -122,7 +122,7 @@ function SkillsAndProjects() {
       wts3: "firebase"
     },
     {
-      id: "ml",
+      id: "machine learning",
       title: "ml3",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
@@ -150,7 +150,7 @@ function SkillsAndProjects() {
       wts3: "firebase"
     },
     {
-      id: "webdev",
+      id: "Web Development",
       title: "wd4",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
@@ -164,7 +164,7 @@ function SkillsAndProjects() {
       wts3: "firebase"
     },
     {
-      id: "ml",
+      id: "machine learning",
       title: "ml4",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
@@ -194,24 +194,32 @@ function SkillsAndProjects() {
     // Add more projects here
   ];
 
+  
   const filteredProjects = filter ? projects.filter(project => project.id === filter) : projects;
 
   return (
+    <>
+
+    <section id="SkillsAndProjects1">
+    <div className="skills-text-main-div">
+        <h1 className="gradient-text">Skills</h1>
+    </div>
+    </section>
     <section id="SkillsAndProjects">
       <div className="skills-text-main-div">
-        <h1 className="gradient-text">SKILLS</h1>
+        <h1 className="gradient-text">PROJECTS</h1>
       </div>
 
       <div className="skills-switch-div">
         <div className="btn-group btn-group-toggle" data-toggle="buttons" >
-          <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white " onClick={() => handleFilterChange("webdev")}>
+          <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white " onClick={() => handleFilterChange("Web Development")}>
             <div id='webdev-pro' className="container">
               <span className="react-logo">
                 <span className="nucleo"></span>
               </span>
             </div>
           </button>
-          <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("ml")}>
+          <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
             <img id='machineLearning-pro' src={machinelearninglogo} alt="Machine-Learning" />
           </button>
           <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
@@ -219,6 +227,12 @@ function SkillsAndProjects() {
           </button>
         </div>
       </div>
+
+      {filter && (
+        <div className="text-center mt-4 mb-2">
+          <h2 className="text-4xl font-bold">{filter.toUpperCase()}</h2>
+        </div>
+      )}
 
       <div className='project-card-super grid grid-cols-3 gap-5'>
         {filteredProjects.map((project, index) => (
@@ -242,6 +256,10 @@ function SkillsAndProjects() {
         ))}
       </div>
     </section>
+
+
+
+    </>
   );
 }
 
