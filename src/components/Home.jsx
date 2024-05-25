@@ -12,7 +12,7 @@ function Home() {
           <p className=''>This is Nithin</p>
         </div>
         <div className="home-div-p3">
-        <p>An undergrad at NITK</p>
+        <p>IT undergrad at NITK'26</p>
         </div>
       </div>
     </section>

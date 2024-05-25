@@ -11,7 +11,7 @@ function ExpCard(props) {
     >
       <div id="Card-Body" className="card-body exp-card-main">
         <div className="exp-card-img">
-          <img src={props.imgSrc} alt={props.Where} />
+          <img src={props.imgSrc} alt={props.Where} style={{ width: '250px', height: '250px' }}/>
         </div>
         <div className="exp-card-content">
           <div className="card-title exp-card-title">
