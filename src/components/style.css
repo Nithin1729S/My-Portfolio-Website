@@ -1,0 +1,13 @@
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .project-grid .project-card {
+    width: calc(33.33% - 20px); /* Adjust width to fit three cards in a row with gap */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px; /* Add padding to each project card */
+  }
+  

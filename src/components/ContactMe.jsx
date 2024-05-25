@@ -15,7 +15,7 @@ function ContactMe(props) {
         </div>
         <div className='contact-me-links'>
           <a href="https://github.com/Nithin1729S" target='_blank'><img src={gitHubLogo} alt={props.Alt} /></a>
-          <a href="https://github.com/Nithin1729S" target='_blank'><img src={linkedInLogo} alt={props.Alt} /></a>
+          <a href="https://www.linkedin.com/in/nithin1729s/" target='_blank'><img src={linkedInLogo} alt={props.Alt} /></a>
           <a href="https://x.com/Nithin1729S" target='_blank'><img src={xLogo} alt={props.Alt} /></a>
           <a href="https://leetcode.com/u/sureshnithin1729/" target='_blank'><img src={leetcodeLogo} alt={props.Alt} /></a>
           <a href="https://codeforces.com/profile/sureshnithin1729" target='_blank'><img src={codeforcesLogo} alt={props.Alt} /></a>
