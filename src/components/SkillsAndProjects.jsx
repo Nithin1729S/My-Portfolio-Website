@@ -14,6 +14,7 @@ import nodejs from '../components/images/nodejs.png';
 import react from '../components/images/react.png';
 import machinelearninglogo from '../components/images/machine-learning.png';
 import blockchainlogo from '../components/images/blockchain.png';
+import idealogo from '../components/images/idea.png';
 
 function SkillsAndProjects() {
   const [filter, setFilter] = useState(null);
@@ -222,8 +223,11 @@ function SkillsAndProjects() {
           <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
             <img id='machineLearning-pro' src={machinelearninglogo} alt="Machine-Learning" />
           </button>
-          <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
+          <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
             <img id='android-pro' src={blockchainlogo} alt="Blockchain" />
+          </button>
+          <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("miscellaneous")}>
+            <img id='android-pro' src={idealogo} alt="idea" />
           </button>
         </div>
       </div>
