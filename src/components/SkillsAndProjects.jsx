@@ -1,7 +1,4 @@
-import React from 'react';
-import blockchainlogo from '../components/images/blockchain.png';
-import machinelearninglogo from '../components/images/machine-learning.png';
-import $ from 'jquery';
+import React, { useState } from 'react';
 import ProjectCard from '../Cards/ProjectCard';
 import githubLogo from '../components/images/github-logo.png';
 import linkLogo from '../components/images/link.png';
@@ -11,225 +8,239 @@ import java from '../components/images/java.png';
 import firebase from '../components/images/firebase_google.png';
 import python from '../components/images/python.png';
 import pyTorch from '../components/images/pytorch.png';
-import html from '../components/images/html.png';
-import css from '../components/images/css.png';
-import js from '../components/images/js.png';
-import react from '../components/images/react.png';
 import tailwindcss from '../components/images/tailwindcss.png';
 import mongodb from '../components/images/mongodb.png';
 import nodejs from '../components/images/nodejs.png';
-//import './style.css'; // Import CSS file
-
-
-$(document).ready(function () {
-  $('#android-pro').hover(function () {
-    $('#ml-pro, #wd-pro').addClass("fadeIn");
-    $('#and-pro').addClass("fadeInLeftToMid");
-    $('#popUp-1').removeClass("invisible");
-    $('#popUp-1').text("Blockchain");
-  }, function () {
-    $('#ml-pro, #wd-pro').removeClass("fadeIn");
-    $('#and-pro').removeClass("fadeInLeftToMid");
-    $('#popUp-1').addClass("invisible");
-  });
-
-
-  $('#machineLearning-pro').hover(function () {
-    $('#and-pro, #wd-pro').addClass("fadeIn");
-    $('#ml-pro').removeClass("fadeIn");
-    $('#ml-pro').addClass("fadeInMidToMid");
-    $('#popUp-2').removeClass("invisible");
-    $('#popUp-2').text("Machine Learning");
-  }, function () {
-    $('#and-pro, #wd-pro').removeClass("fadeIn");
-    $('#ml-pro').removeClass("fadeInMidToMid");
-    $('#popUp-2').addClass("invisible");
-  });
-
-
-  $('#webdev-pro').hover(function () {
-    $('#ml-pro, #and-pro').addClass("fadeIn");
-    $('#wd-pro').removeClass("fadeIn");
-    $('#wd-pro').addClass("fadeInRightToMid");
-    $('#popUp-3').removeClass("invisible");
-    $('#popUp-3').text("Web Development");
-  }, function () {
-    $('#ml-pro, #and-pro').removeClass("fadeIn");
-    $('#wd-pro').removeClass("fadeInRightToMid");
-    $('#popUp-3').addClass("invisible");
-  });
-});
-
+import react from '../components/images/react.png';
+import machinelearninglogo from '../components/images/machine-learning.png';
+import blockchainlogo from '../components/images/blockchain.png';
 
 function SkillsAndProjects() {
+  const [filter, setFilter] = useState(null);
+
+  const handleFilterChange = (filterType) => {
+    setFilter(filterType);
+  };
+
+  const projects = [
+    {
+      id: "webdev",
+      title: "webdev1",
+      desc: "An app that helps you locate profs during working hours",
+      link: "https://github.com/pranav-salunkhe/ProfFinder",
+      imgSrc: githubLogo,
+      alt: "GitHub Logo",
+      ts1: androidFull,
+      wts1: "android",
+      ts2: java,
+      wts2: "java",
+      ts3: firebase,
+      wts3: "firebase"
+    },
+    {
+      id: "ml",
+      title: "ml1",
+      desc: "Performed Sentiment Analysis on Covid-19",
+      link: "https://docs.google.com/document/d/1c1YdVv_EwczIVUHz0x3YKcf7-zOtPTfOO3hjqqB0ZiE/edit?usp=sharing",
+      imgSrc: linkLogo,
+      alt: "Link Logo",
+      ts1: python,
+      wts1: "python",
+      ts2: pyTorch,
+      wts2: "pyTorch"
+    },
+    {
+      id: "blockchain",
+      title: "bc1",
+      desc: "A Fullstack Event Management Application",
+      link: "https://github.com/pranav-salunkhe/wwwE",
+      imgSrc: externalLinkLogo,
+      alt: "External Link Logo",
+      ts1: tailwindcss,
+      wts1: "tailwindcss",
+      ts2: mongodb,
+      wts2: "mongodb",
+      ts3: nodejs,
+      wts3: "nodejs",
+      ts4: react,
+      wts4: "react"
+    },
+    {
+      id: "webdev",
+      title: "wd2",
+      desc: "An app that helps you locate profs during working hours",
+      link: "https://github.com/pranav-salunkhe/ProfFinder",
+      imgSrc: githubLogo,
+      alt: "GitHub Logo",
+      ts1: androidFull,
+      wts1: "android",
+      ts2: java,
+      wts2: "java",
+      ts3: firebase,
+      wts3: "firebase"
+    },
+    {
+      id: "ml",
+      title: "ml2",
+      desc: "An app that helps you locate profs during working hours",
+      link: "https://github.com/pranav-salunkhe/ProfFinder",
+      imgSrc: githubLogo,
+      alt: "GitHub Logo",
+      ts1: androidFull,
+      wts1: "android",
+      ts2: java,
+      wts2: "java",
+      ts3: firebase,
+      wts3: "firebase"
+    },
+    {
+      id: "blockchain",
+      title: "bc2",
+      desc: "An app that helps you locate profs during working hours",
+      link: "https://github.com/pranav-salunkhe/ProfFinder",
+      imgSrc: githubLogo,
+      alt: "GitHub Logo",
+      ts1: androidFull,
+      wts1: "android",
+      ts2: java,
+      wts2: "java",
+      ts3: firebase,
+      wts3: "firebase"
+    },
+    {
+      id: "webdev",
+      title: "wd3",
+      desc: "An app that helps you locate profs during working hours",
+      link: "https://github.com/pranav-salunkhe/ProfFinder",
+      imgSrc: githubLogo,
+      alt: "GitHub Logo",
+      ts1: androidFull,
+      wts1: "android",
+      ts2: java,
+      wts2: "java",
+      ts3: firebase,
+      wts3: "firebase"
+    },
+    {
+      id: "ml",
+      title: "ml3",
+      desc: "An app that helps you locate profs during working hours",
+      link: "https://github.com/pranav-salunkhe/ProfFinder",
+      imgSrc: githubLogo,
+      alt: "GitHub Logo",
+      ts1: androidFull,
+      wts1: "android",
+      ts2: java,
+      wts2: "java",
+      ts3: firebase,
+      wts3: "firebase"
+    },
+    {
+      id: "bc3",
+      title: "Prof-Finder",
+      desc: "An app that helps you locate profs during working hours",
+      link: "https://github.com/pranav-salunkhe/ProfFinder",
+      imgSrc: githubLogo,
+      alt: "GitHub Logo",
+      ts1: androidFull,
+      wts1: "android",
+      ts2: java,
+      wts2: "java",
+      ts3: firebase,
+      wts3: "firebase"
+    },
+    {
+      id: "webdev",
+      title: "wd4",
+      desc: "An app that helps you locate profs during working hours",
+      link: "https://github.com/pranav-salunkhe/ProfFinder",
+      imgSrc: githubLogo,
+      alt: "GitHub Logo",
+      ts1: androidFull,
+      wts1: "android",
+      ts2: java,
+      wts2: "java",
+      ts3: firebase,
+      wts3: "firebase"
+    },
+    {
+      id: "ml",
+      title: "ml4",
+      desc: "An app that helps you locate profs during working hours",
+      link: "https://github.com/pranav-salunkhe/ProfFinder",
+      imgSrc: githubLogo,
+      alt: "GitHub Logo",
+      ts1: androidFull,
+      wts1: "android",
+      ts2: java,
+      wts2: "java",
+      ts3: firebase,
+      wts3: "firebase"
+    },
+    {
+      id: "blockchain",
+      title: "bc4",
+      desc: "An app that helps you locate profs during working hours",
+      link: "https://github.com/pranav-salunkhe/ProfFinder",
+      imgSrc: githubLogo,
+      alt: "GitHub Logo",
+      ts1: androidFull,
+      wts1: "android",
+      ts2: java,
+      wts2: "java",
+      ts3: firebase,
+      wts3: "firebase"
+    }
+    // Add more projects here
+  ];
+
+  const filteredProjects = filter ? projects.filter(project => project.id === filter) : projects;
+
   return (
     <section id="SkillsAndProjects">
       <div className="skills-text-main-div">
         <h1 className="gradient-text">SKILLS</h1>
       </div>
 
-      
       <div className="skills-switch-div">
         <div className="btn-group btn-group-toggle" data-toggle="buttons" >
-          <div className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white ">
+          <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white " onClick={() => handleFilterChange("webdev")}>
             <div id='webdev-pro' className="container">
               <span className="react-logo">
                 <span className="nucleo"></span>
               </span>
             </div>
-          </div>
-          <div className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center">
+          </button>
+          <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("ml")}>
             <img id='machineLearning-pro' src={machinelearninglogo} alt="Machine-Learning" />
-          </div>
-          <div className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center">
-            <img id='android-pro' src={blockchainlogo} alt="Android" />
-          </div>
+          </button>
+          <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
+            <img id='android-pro' src={blockchainlogo} alt="Blockchain" />
+          </button>
         </div>
       </div>
 
-
-
-      {/* <div className="grid grid-cols-3 gap-4"> */}
       <div className='project-card-super grid grid-cols-3 gap-5'>
-        <div id='and-pro'>
-          <div id='popUp-1' className='popUpText invisible'>
+        {filteredProjects.map((project, index) => (
+          <div key={index}>
+            <ProjectCard
+              title={project.title}
+              desc={project.desc}
+              link={project.link}
+              imgSrc={project.imgSrc}
+              alt={project.alt}
+              ts1={project.ts1}
+              wts1={project.wts1}
+              ts2={project.ts2}
+              wts2={project.wts2}
+              ts3={project.ts3}
+              wts3={project.wts3}
+              ts4={project.ts4}
+              wts4={project.wts4}
+            />
           </div>
-          <ProjectCard
-            title="Prof-Finder"
-            desc="An app that helps you locate profs during working hours"
-            link="https://github.com/pranav-salunkhe/ProfFinder"
-            imgSrc={githubLogo}
-            alt="GitHub Logo"
-            ts1={androidFull}
-            wts1="android"
-            ts2={java}
-            wts2="java"
-            ts3={firebase}
-            wts3="firebase"
-          />
-        </div>
-
-
-        <div id='ml-pro'>
-          <div id='popUp-2' className='popUpText invisible'>
-          </div>
-          <ProjectCard
-            title="Sentiment Analysis"
-            desc="Performed Sentiment Analysis on Covid-19"
-            link="https://docs.google.com/document/d/1c1YdVv_EwczIVUHz0x3YKcf7-zOtPTfOO3hjqqB0ZiE/edit?usp=sharing"
-            imgSrc={linkLogo}
-            alt="Link Logo"
-            ts1={python}
-            wts1="python"
-            ts2={pyTorch}
-            wts2="pyTorch"
-          />
-        </div>
-
-
-        <div id='wd-pro'>
-          <div id='popUp-3' className='popUpText invisible'>
-          </div>
-          <ProjectCard
-            title="wwwE"
-            desc="A Fullstack Event Management Application"
-            link="https://github.com/pranav-salunkhe/wwwE"
-            imgSrc={externalLinkLogo}
-            alt="External Link Logo"
-            ts1={tailwindcss}
-            wts1="tailwindcss"
-            ts2={mongodb}
-            wts2="mongodb"
-            ts3={nodejs}
-            wts3="nodejs"
-            ts4={react}
-            wts4="react"
-          />
-        </div>
-
-        <div id='ml-pro'>
-          <div id='popUp-2' className='popUpText invisible'>
-          </div>
-          <ProjectCard
-            title="Sentiment Analysis"
-            desc="Performed Sentiment Analysis on Covid-19"
-            link="https://docs.google.com/document/d/1c1YdVv_EwczIVUHz0x3YKcf7-zOtPTfOO3hjqqB0ZiE/edit?usp=sharing"
-            imgSrc={linkLogo}
-            alt="Link Logo"
-            ts1={python}
-            wts1="python"
-            ts2={pyTorch}
-            wts2="pyTorch"
-          />
-        </div>
-
-        <div id='and-pro'>
-          <div id='popUp-2' className='popUpText invisible'>
-          </div>
-          <ProjectCard
-            title="Sentiment Analysis"
-            desc="Performed Sentiment Analysis on Covid-19"
-            link="https://docs.google.com/document/d/1c1YdVv_EwczIVUHz0x3YKcf7-zOtPTfOO3hjqqB0ZiE/edit?usp=sharing"
-            imgSrc={linkLogo}
-            alt="Link Logo"
-            ts1={python}
-            wts1="python"
-            ts2={pyTorch}
-            wts2="pyTorch"
-          />
-        </div>
-
-        <div id='and-pro'>
-          <div id='popUp-2' className='popUpText invisible'>
-          </div>
-          <ProjectCard
-            title="Sentiment Analysis"
-            desc="Performed Sentiment Analysis on Covid-19"
-            link="https://docs.google.com/document/d/1c1YdVv_EwczIVUHz0x3YKcf7-zOtPTfOO3hjqqB0ZiE/edit?usp=sharing"
-            imgSrc={linkLogo}
-            alt="Link Logo"
-            ts1={python}
-            wts1="python"
-            ts2={pyTorch}
-            wts2="pyTorch"
-          />
-        </div>
-
-        <div id='and-pro'>
-          <div id='popUp-2' className='popUpText invisible'>
-          </div>
-          <ProjectCard
-            title="Sentiment Analysis"
-            desc="Performed Sentiment Analysis on Covid-19"
-            link="https://docs.google.com/document/d/1c1YdVv_EwczIVUHz0x3YKcf7-zOtPTfOO3hjqqB0ZiE/edit?usp=sharing"
-            imgSrc={linkLogo}
-            alt="Link Logo"
-            ts1={python}
-            wts1="python"
-            ts2={pyTorch}
-            wts2="pyTorch"
-          />
-        </div>
-
-        <div id='and-pro'>
-          <div id='popUp-2' className='popUpText invisible'>
-          </div>
-          <ProjectCard
-            title="Sentiment Analysis"
-            desc="Performed Sentiment Analysis on Covid-19"
-            link="https://docs.google.com/document/d/1c1YdVv_EwczIVUHz0x3YKcf7-zOtPTfOO3hjqqB0ZiE/edit?usp=sharing"
-            imgSrc={linkLogo}
-            alt="Link Logo"
-            ts1={python}
-            wts1="python"
-            ts2={pyTorch}
-            wts2="pyTorch"
-          />
-        </div>
-
-
+        ))}
       </div>
-      {/* </div> */}
     </section>
   );
 }
