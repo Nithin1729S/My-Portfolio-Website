@@ -20,7 +20,8 @@ function App() {
       />
       <div style={{ marginTop: '500px' }}>
         <SkillsAndProjects />
-      </div>        <Experience />
+      </div>        
+      <Experience />
       <ContactMe />
 
     </div>

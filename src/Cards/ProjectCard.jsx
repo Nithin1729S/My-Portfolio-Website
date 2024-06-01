@@ -31,10 +31,10 @@ function ProjectCard(props) {
         <h4 className='fst-italic'>{props.desc}</h4>
       </div>
       <div id='#footer' className='card-footer project-card-footer'>
-        <img height="72" width="72" src={props.ts1} alt={props.wts1} />
-        <img height="72" width="72" src={props.ts2} alt={props.wts2} />
-        <img height="72" width="72" src={props.ts3} alt={props.wts3} />
-        <img height="72" width="72" src={props.ts4} alt={props.wts4} />
+        {props.ts1 && <img height="72" width="72" src={props.ts1} alt={props.wts1} />}
+        {props.ts2 && <img height="72" width="72" src={props.ts2} alt={props.wts2} />}
+        {props.ts3 && <img height="72" width="72" src={props.ts3} alt={props.wts3} />}
+        {props.ts4 && <img height="72" width="72" src={props.ts4} alt={props.wts4} />}
       </div>
     </div>
   );
