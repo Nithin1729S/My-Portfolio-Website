@@ -132,8 +132,8 @@ function SkillsAndProjects() {
       wts2: "java",
       ts3: firebase,
       wts3: "firebase",
-      ts3: firebase,
-      wts3: "firebase"
+      ts4: firebase,
+      wts4: "firebase"
     },
     {
       id: "machine learning",
@@ -366,20 +366,20 @@ function SkillsAndProjects() {
         <div className="skills-switch-div">
           <div className="btn-group btn-group-toggle" data-toggle="buttons" >
             <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white " onClick={() => handleFilterChange("Web Development")}>
-              <div id='webdev-pro' className="container">
+              <div id='webdev' className="container">
                 <span className="react-logo">
                   <span className="nucleo"></span>
                 </span>
               </div>
             </button>
             <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
-              <img id='machineLearning-pro' src={machinelearninglogo} alt="Machine-Learning" />
+              <img id='ml' src={machinelearninglogo} alt="Machine-Learning" />
             </button>
             <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
-              <img id='android-pro' src={blockchainlogo} alt="Blockchain" />
+              <img id='blockchain' src={blockchainlogo} alt="Blockchain" />
             </button>
             <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("miscellaneous")}>
-              <img id='android-pro' src={idealogo} alt="idea" />
+              <img id='misc' src={idealogo} alt="idea" />
             </button>
           </div>
         </div>
@@ -394,20 +394,7 @@ function SkillsAndProjects() {
           {filteredProjects.map((project, index) => (
             <div key={index}>
               <ProjectCard
-                title={project.title}
-                desc={project.desc}
-                link={project.link}
-                imgSrc={project.imgSrc}
-                imgSrc1={project.imgSrc1}
-                alt={project.alt}
-                ts1={project.ts1}
-                wts1={project.wts1}
-                ts2={project.ts2}
-                wts2={project.wts2}
-                ts3={project.ts3}
-                wts3={project.wts3}
-                ts4={project.ts4}
-                wts4={project.wts4}
+                {...project}
               />
             </div>
           ))}
