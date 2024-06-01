@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import ProjectCard from '../Cards/ProjectCard';
 import SkillCard from '../Cards/SkillCard';
 import githubLogo from '../components/images/github-logo.png';
-import linkLogo from '../components/images/link.png';
 import liveLogo from '../components/images/live.png';
-import externalLinkLogo from '../components/images/external-link.png';
 import androidFull from '../components/images/androidFull.png';
 import java from '../components/images/java.png';
 import firebase from '../components/images/firebase_google.png';
@@ -209,6 +207,131 @@ function SkillsAndProjects() {
   ];
 
 
+  const skills = [
+    {
+      title: 'C++',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Python',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Java',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Solidity',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Javascript',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'OOPS',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Machine Learning',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Blockchain',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+    {
+      title: 'Cryptography',
+      link: 'jo',
+      imgSrc: java
+    },
+
+    // Add more skills here
+  ];
+
   const filteredProjects = filter ? projects.filter(project => project.id === filter) : projects;
 
   return (
@@ -216,146 +339,15 @@ function SkillsAndProjects() {
 
       <section id="SkillsAndProjects1">
         <div className="skills-text-main-div">
-        <h1 class="gradient-text">Skills</h1>
-                </div>
+          <h1 class="gradient-text">Skills</h1>
+        </div>
       </section>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 pl-5">
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"Python"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"Java"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"Solidity"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"OOPS"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"Machine Learning"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"BlockChain"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"Cryptography"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
-        <div>
-          <SkillCard
-            title={"C++"}
-            link={"jo"}
-            imgSrc={java}
-          />
-        </div>
 
-
+        {skills.map((skill, index) => {
+          return <div><SkillCard {...skill} /></div>;
+        })}
       </div>
-
-
-
-
-
-
-
 
 
       <section id="SkillsAndProjects">
