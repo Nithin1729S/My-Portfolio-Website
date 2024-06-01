@@ -1,8 +1,4 @@
 import React from 'react';
-
-
-
-
 function ExpCard(props) {
   return (
     <div

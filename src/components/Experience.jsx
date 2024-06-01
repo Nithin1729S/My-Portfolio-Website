@@ -26,7 +26,7 @@ function Experience() {
       WorkDone2:"-Developed ISTE's Virtual Expo"
     },
     {
-      id:'1',
+      id:'3',
       imgSrc:ieeeLogo,
       Where:"IEEE NITK",
       Time:"Nov 2022 - April 2023",

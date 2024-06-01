@@ -392,9 +392,6 @@ function SkillsAndProjects() {
           ))}
         </div>
       </section>
-
-
-
     </>
   );
 }
