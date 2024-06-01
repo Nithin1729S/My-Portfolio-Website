@@ -204,138 +204,138 @@ function SkillsAndProjects() {
 
       <section id="SkillsAndProjects1">
         <div className="skills-text-main-div">
-          <h1 className="gradient-text">Skills</h1>
+          <h1 class="gradient-text ">Skills</h1>
         </div>
       </section>
-      <div class="grid grid-cols-6 gap-4 pl-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 pl-5">
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
         <div>
-        <SkillCard
-                title={"C++"}
-                link={"jo"}
-                imgSrc={java}
-              />
+          <SkillCard
+            title={"C++"}
+            link={"jo"}
+            imgSrc={java}
+          />
         </div>
 
-        
+
       </div>
 
 
@@ -378,7 +378,7 @@ function SkillsAndProjects() {
           </div>
         )}
 
-        <div className='project-card-super grid grid-cols-3 gap-5'>
+        <div class="project-card-super grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-5">
           {filteredProjects.map((project, index) => (
             <div key={index}>
               <ProjectCard
