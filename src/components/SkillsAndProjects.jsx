@@ -3,6 +3,7 @@ import ProjectCard from '../Cards/ProjectCard';
 import SkillCard from '../Cards/SkillCard';
 import githubLogo from '../components/images/github-logo.png';
 import linkLogo from '../components/images/link.png';
+import liveLogo from '../components/images/live.png';
 import externalLinkLogo from '../components/images/external-link.png';
 import androidFull from '../components/images/androidFull.png';
 import java from '../components/images/java.png';
@@ -17,6 +18,7 @@ import machinelearninglogo from '../components/images/machine-learning.png';
 import blockchainlogo from '../components/images/blockchain.png';
 import idealogo from '../components/images/idea.png';
 
+
 function SkillsAndProjects() {
   const [filter, setFilter] = useState(null);
 
@@ -27,24 +29,28 @@ function SkillsAndProjects() {
   const projects = [
     {
       id: "Web Development",
-      title: "webdev1",
+      title: "Food Ordering Application",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
       imgSrc: githubLogo,
+      imgSrc1: liveLogo,
       alt: "GitHub Logo",
       ts1: androidFull,
       wts1: "android",
       ts2: java,
       wts2: "java",
       ts3: firebase,
-      wts3: "firebase"
+      wts3: "firebase",
+      ts4: firebase,
+      wts4: "firebase"
     },
     {
       id: "machine learning",
-      title: "ml1",
+      title: "Image Style Transfer",
       desc: "Performed Sentiment Analysis on Covid-19",
       link: "https://docs.google.com/document/d/1c1YdVv_EwczIVUHz0x3YKcf7-zOtPTfOO3hjqqB0ZiE/edit?usp=sharing",
-      imgSrc: linkLogo,
+      imgSrc: githubLogo,
+      imgSrc1: liveLogo,
       alt: "Link Logo",
       ts1: python,
       wts1: "python",
@@ -53,10 +59,11 @@ function SkillsAndProjects() {
     },
     {
       id: "blockchain",
-      title: "bc1",
+      title: "Web3 Vault Dapp",
       desc: "A Fullstack Event Management Application",
       link: "https://github.com/pranav-salunkhe/wwwE",
-      imgSrc: externalLinkLogo,
+      imgSrc: githubLogo,
+      imgSrc1: liveLogo,
       alt: "External Link Logo",
       ts1: tailwindcss,
       wts1: "tailwindcss",
@@ -69,10 +76,11 @@ function SkillsAndProjects() {
     },
     {
       id: "Web Development",
-      title: "wd2",
+      title: "Chatroom",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
       imgSrc: githubLogo,
+      imgSrc1: liveLogo,
       alt: "GitHub Logo",
       ts1: androidFull,
       wts1: "android",
@@ -87,6 +95,7 @@ function SkillsAndProjects() {
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
       imgSrc: githubLogo,
+      imgSrc1: liveLogo,
       alt: "GitHub Logo",
       ts1: androidFull,
       wts1: "android",
@@ -115,11 +124,14 @@ function SkillsAndProjects() {
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
       imgSrc: githubLogo,
+      imgSrc1: liveLogo,
       alt: "GitHub Logo",
       ts1: androidFull,
       wts1: "android",
       ts2: java,
       wts2: "java",
+      ts3: firebase,
+      wts3: "firebase",
       ts3: firebase,
       wts3: "firebase"
     },
@@ -204,8 +216,8 @@ function SkillsAndProjects() {
 
       <section id="SkillsAndProjects1">
         <div className="skills-text-main-div">
-          <h1 class="gradient-text ">Skills</h1>
-        </div>
+        <h1 class="gradient-text">Skills</h1>
+                </div>
       </section>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 pl-5">
         <div>
@@ -217,49 +229,49 @@ function SkillsAndProjects() {
         </div>
         <div>
           <SkillCard
-            title={"C++"}
+            title={"Python"}
             link={"jo"}
             imgSrc={java}
           />
         </div>
         <div>
           <SkillCard
-            title={"C++"}
+            title={"Java"}
             link={"jo"}
             imgSrc={java}
           />
         </div>
         <div>
           <SkillCard
-            title={"C++"}
+            title={"Solidity"}
             link={"jo"}
             imgSrc={java}
           />
         </div>
         <div>
           <SkillCard
-            title={"C++"}
+            title={"OOPS"}
             link={"jo"}
             imgSrc={java}
           />
         </div>
         <div>
           <SkillCard
-            title={"C++"}
+            title={"Machine Learning"}
             link={"jo"}
             imgSrc={java}
           />
         </div>
         <div>
           <SkillCard
-            title={"C++"}
+            title={"BlockChain"}
             link={"jo"}
             imgSrc={java}
           />
         </div>
         <div>
           <SkillCard
-            title={"C++"}
+            title={"Cryptography"}
             link={"jo"}
             imgSrc={java}
           />
@@ -378,7 +390,7 @@ function SkillsAndProjects() {
           </div>
         )}
 
-        <div class="project-card-super grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-5">
+        <div class="project-card-super grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-4 md:gap-5">
           {filteredProjects.map((project, index) => (
             <div key={index}>
               <ProjectCard
@@ -386,6 +398,7 @@ function SkillsAndProjects() {
                 desc={project.desc}
                 link={project.link}
                 imgSrc={project.imgSrc}
+                imgSrc1={project.imgSrc1}
                 alt={project.alt}
                 ts1={project.ts1}
                 wts1={project.wts1}
