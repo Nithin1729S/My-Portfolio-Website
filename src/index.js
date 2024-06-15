@@ -146,7 +146,7 @@ else{
     const ratio = window.devicePixelRatio || 1;
     canvas.width = canvas.clientWidth * ratio;
     canvas.height = canvas.clientHeight * ratio;
-    ctx.scale(ratio, ratio);
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0); // Use setTransform to ensure scaling
   }
   
   // Call the function to adjust canvas size
@@ -155,18 +155,7 @@ else{
   window.addEventListener('resize', adjustCanvasSize);
   
   let particleArray = [];
-  const speed = 0.5; // Speed multiplier to control particle speed
-  
-  const mouse = {
-    x: null,
-    y: null,
-    radius: 100 // Adjust the interaction radius as needed
-  };
-  
-  window.addEventListener('mousemove', function(event) {
-    mouse.x = event.x;
-    mouse.y = event.y;
-  });
+  const speed = 0.1; // Speed multiplier to control particle speed
   
   ctx.font = '90px Arial';
   ctx.fillText('A', 20, 50);
@@ -190,42 +179,16 @@ else{
       ctx.fill();
     }
     update() {
-      // Check mouse interaction
-      let dx = mouse.x - this.x;
-      let dy = mouse.y - this.y;
-      let distance = Math.sqrt(dx * dx + dy * dy);
-      let forceDirectionX = dx / distance;
-      let forceDirectionY = dy / distance;
-      let maxDistance = mouse.radius;
-      let force = (maxDistance - distance) / maxDistance;
-      let directionX = forceDirectionX * force * this.density;
-      let directionY = forceDirectionY * force * this.density;
-  
-      if (distance < mouse.radius) {
-        this.x -= directionX;
-        this.y -= directionY;
-      } else {
-        // Random movement
-        this.x += this.directionX;
-        this.y += this.directionY;
-      }
+      // Random movement
+      this.x += this.directionX;
+      this.y += this.directionY;
   
       // Boundary check and bounce back
-      if (this.x + this.size > canvas.width || this.x - this.size < 0) {
+      if (this.x + this.size > canvas.width / (window.devicePixelRatio || 1) || this.x - this.size < 0) {
         this.directionX = -this.directionX;
       }
-      if (this.y + this.size > canvas.height || this.y - this.size < 0) {
+      if (this.y + this.size > canvas.height / (window.devicePixelRatio || 1) || this.y - this.size < 0) {
         this.directionY = -this.directionY;
-      }
-  
-      // Ensure particles return to their base position slowly if no interaction
-      if (this.x !== this.baseX) {
-        let dx = this.x - this.baseX;
-        this.x -= dx / 50;
-      }
-      if (this.y !== this.baseY) {
-        let dy = this.y - this.baseY;
-        this.y -= dy / 50;
       }
     }
   }
@@ -233,8 +196,8 @@ else{
   function init() {
     particleArray = [];
     for (let i = 0; i < 100; i++) {
-      let x = Math.random() * canvas.width / window.devicePixelRatio;
-      let y = Math.random() * canvas.height / window.devicePixelRatio;
+      let x = Math.random() * canvas.width / (window.devicePixelRatio || 1);
+      let y = Math.random() * canvas.height / (window.devicePixelRatio || 1);
       particleArray.push(new Particle(x, y));
     }
   }
