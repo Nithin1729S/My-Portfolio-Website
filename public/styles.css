@@ -42,7 +42,7 @@ canvas{
 
 #main {
     font-family: personal-font, serif;
-    background-color: #ECEBE7;
+    background-color: #ffffff;
     /* color: #4B4A48; */
 }
 
@@ -78,7 +78,7 @@ canvas{
 }
 
 .Home-onHoverOut {
-    color:#ECEBE7;
+    color:#ffffff;
 }
 
 .home-div {
@@ -114,7 +114,7 @@ canvas{
 }
 
 .gradient-text{
-    background-image: linear-gradient(45deg, #4d4d4d, #ECEBE7);
+    background-image: linear-gradient(45deg, #4d4d4d, #ffffff);
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -146,7 +146,7 @@ canvas{
     border-radius:100%;
     margin-bottom: 18px;
     padding: 10px;
-    border:10px solid #ECEBE7;
+    border:10px solid #ffffff;
 
     animation-name:rotate;
     animation-duration: 5s;
@@ -161,7 +161,7 @@ canvas{
     width:80px;
     height:30px;
     border-radius:100%;
-    border:5px solid #ECEBE7;
+    border:5px solid #ffffff;
   }
 
   .nucleo , .react-logo , .react-logo:before , .react-logo:after {
@@ -174,7 +174,7 @@ canvas{
     width:10px;
     height:10px;
     border-radius:100%;
-    background:#ECEBE7;
+    background:#ffffff;
   }
 
   .react-logo:before , .react-logo:after{
@@ -306,7 +306,7 @@ canvas{
 }
 
 .exp-card-super{
-    background: #ECEBE7;
+    background: #ffffff;
 }
 
 .exp-main{
@@ -314,10 +314,11 @@ canvas{
     display: flex;
     justify-content: center;
     perspective: 100000px;
+
 }
 
 .exp-card-main{
-    background: #ECEBE7;
+    background: #ffffff;
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
@@ -367,6 +368,8 @@ canvas{
     }
     .project-card{
         width: 70vw;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     }
     .exp-card-div{
         width: 100%;
@@ -406,6 +409,7 @@ canvas{
 @media screen and (min-width:768px) and (max-width:1240px) {
     .project-card-super{
         display: grid;
+        
         grid-template-columns: repeat(1, 6fr);
     }
     .project-card{

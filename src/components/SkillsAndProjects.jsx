@@ -469,10 +469,10 @@ function SkillsAndProjects() {
                 </span>
               </div>
             </button>
-            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white  items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
+            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white  items-center justify-center pl-6" onClick={() => handleFilterChange("machine learning")}>
               <img id='ml' src={machinelearninglogo} alt="Machine-Learning" />
             </button>
-            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
+            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white items-center justify-center pl-10 "  onClick={() => handleFilterChange("blockchain")}>
               <img id='blockchain' src={blockchainlogo} alt="Blockchain" />
             </button>
             <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("miscellaneous")}>
