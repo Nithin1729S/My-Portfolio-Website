@@ -1,11 +1,25 @@
 import React from 'react';
 import ExpCard from '../Cards/ExpCard';
+import ExpCard_m from '../Cards/ExpCard_m';
 import isteLogo from '../components/images/istenitk.png';
 import ieeeLogo from '../components/images/ieee.png';
 import haleLogo from '../components/images/HALE.png';
+import { useState, useEffect } from 'react';
 
 
 function Experience() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const experience=[
     {
       id:'1',
@@ -35,14 +49,33 @@ function Experience() {
       WorkDone2:"-Developed ISTE's Virtual Expo"
     },
   ]
-  return (
-    <section id='Experience' className='exp-card-sec flex justify-center'>
+
+  const MobileExp = () => (
+    <>
+      <section id='Experience' className='exp-card-sec flex justify-center'>
       <div className='exp-card-div' style={{ marginLeft: '78px' }}>
         {experience.map((exp)=>(
            <ExpCard {...exp}/>
         ))}
       </div>
     </section>
+    </>
+  );
+
+  const DesktopExp = () => (
+    <>
+      <section id='Experience' className='exp-card-sec flex justify-center'>
+      <div className='exp-card-div' style={{ marginLeft: '78px' }}>
+        {experience.map((exp)=>(
+           <ExpCard {...exp}/>
+        ))}
+      </div>
+    </section>
+    </>
+  );
+
+  return (
+    isMobile ? <MobileExp /> : <DesktopExp />
   );
 }
 

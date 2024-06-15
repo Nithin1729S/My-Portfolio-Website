@@ -418,7 +418,7 @@ function SkillsAndProjects() {
         <h1 className="gradient-text" style={{ fontSize: '70px' }}>Skills</h1>
         </div>
       </section>
-      <div className="grid grid-cols-1 gap-4 pl-5">
+      <div className="grid grid-cols-1 gap-4 pl-7">
         {skills.map((skill, index) => {
           return <div key={index}><SkillCard_m {...skill} /></div>;
         })}
@@ -427,26 +427,7 @@ function SkillsAndProjects() {
         <div className="skills-text-main-div">
         <h1 className="gradient-text" style={{ fontSize: '70px' }}>Projects</h1>
         </div>
-        <div className="skills-switch-div">
-          <div className="btn-group btn-group-toggle" data-toggle="buttons">
-            <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white" onClick={() => handleFilterChange("Web Development")}>
-              <div id='webdev' className="container">
-                <span className="react-logo">
-                  <span className="nucleo"></span>
-                </span>
-              </div>
-            </button>
-            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
-              <img id='ml' src={machinelearninglogo} alt="Machine-Learning" />
-            </button>
-            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
-              <img id='blockchain' src={blockchainlogo} alt="Blockchain" />
-            </button>
-            <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("miscellaneous")}>
-              <img id='misc' src={idealogo} alt="idea" />
-            </button>
-          </div>
-        </div>
+        
         {filter && (
           <div className="text-center mt-4 mb-2">
             <h2 className="text-4xl font-bold">{filter.toUpperCase()}</h2>
@@ -488,10 +469,10 @@ function SkillsAndProjects() {
                 </span>
               </div>
             </button>
-            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
+            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white  items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
               <img id='ml' src={machinelearninglogo} alt="Machine-Learning" />
             </button>
-            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
+            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
               <img id='blockchain' src={blockchainlogo} alt="Blockchain" />
             </button>
             <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("miscellaneous")}>

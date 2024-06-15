@@ -321,6 +321,7 @@ canvas{
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
+    margin-right:56px;
 }
 
 .exp-main:hover .exp-card-main{
