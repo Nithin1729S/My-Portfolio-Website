@@ -501,4 +501,3 @@ function SkillsAndProjects() {
 
 export default SkillsAndProjects;
 
-
