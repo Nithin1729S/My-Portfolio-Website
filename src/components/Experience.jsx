@@ -1,6 +1,5 @@
 import React from 'react';
 import ExpCard from '../Cards/ExpCard';
-import ExpCard_m from '../Cards/ExpCard_m';
 import isteLogo from '../components/images/istenitk.png';
 import ieeeLogo from '../components/images/ieee.png';
 import haleLogo from '../components/images/HALE.png';
