@@ -10,20 +10,20 @@ $(document).ready(function () {
 });
 
 
-function ProjectCard(props) {
+function ProjectCard_m(props) {
   return (
     <div className="card project-card bg-transparent border-dark h-100">
       <div className="card-title project-card-title d-flex">
         <h2 className='fw-bold' style={{ minWidth: '250px' }}>{props.title}</h2>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <a href={props.link1} target="_blank">
+          {/* <a href={props.link1} target="_blank">
             <img title='Source Code'src={props.imgSrc} alt={props.alt} />
           </a>
           {props.imgSrc1 && (
             <a href={props.link2} target="_blank">
               <img title='Live Demo' style={{ width: '40px', height: '40px', marginLeft: '20px' }} src={props.imgSrc1} alt={props.alt} />
             </a>
-          )}
+          )} */}
         </div>
 
       </div>
@@ -40,4 +40,4 @@ function ProjectCard(props) {
   );
 }
 
-export default ProjectCard;
+export default ProjectCard_m;

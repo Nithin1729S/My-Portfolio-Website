@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import ProjectCard from '../Cards/ProjectCard';
+import ProjectCard_m from '../Cards/ProjectCard_m';
 import SkillCard from '../Cards/SkillCard';
+import SkillCard_m from '../Cards/SkillCard_m';
 import githubLogo from '../components/images/github-logo.png';
 import liveLogo from '../components/images/live.png';
 import androidFull from '../components/images/androidFull.png';
@@ -18,13 +20,40 @@ import idealogo from '../components/images/idea.png';
 
 
 function SkillsAndProjects() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [filter, setFilter] = useState(null);
 
   const handleFilterChange = (filterType) => {
     setFilter(filterType);
   };
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const projects = [
+    
+    {
+      id: "machine learning",
+      title: "Image Style Transfer Using CNNs",
+      desc: "A Flask application that uses neural style transfer to blend content and style images effortlessly",
+      link1: "https://github.com/Nithin1729S/Image-Style-Transfer-Using-CNNs.git",
+      link2: "https://www.youtube.com/watch?v=6c5A9ZEjpB8",
+      imgSrc: githubLogo,
+      imgSrc1: liveLogo,
+      alt: "Link Logo",
+      ts1: python,
+      wts1: "python",
+      ts2: pyTorch,
+      wts2: "pyTorch"
+    },
     {
       id: "Web Development",
       title: "Food Ordering Application",
@@ -41,19 +70,6 @@ function SkillsAndProjects() {
       wts3: "firebase",
       ts4: firebase,
       wts4: "firebase"
-    },
-    {
-      id: "machine learning",
-      title: "Image Style Transfer",
-      desc: "Performed Sentiment Analysis on Covid-19",
-      link: "https://docs.google.com/document/d/1c1YdVv_EwczIVUHz0x3YKcf7-zOtPTfOO3hjqqB0ZiE/edit?usp=sharing",
-      imgSrc: githubLogo,
-      imgSrc1: liveLogo,
-      alt: "Link Logo",
-      ts1: python,
-      wts1: "python",
-      ts2: pyTorch,
-      wts2: "pyTorch"
     },
     {
       id: "blockchain",
@@ -74,7 +90,7 @@ function SkillsAndProjects() {
     },
     {
       id: "Web Development",
-      title: "Chatroom",
+      title: "AniTalk",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
       imgSrc: githubLogo,
@@ -334,30 +350,86 @@ function SkillsAndProjects() {
 
   const filteredProjects = filter ? projects.filter(project => project.id === filter) : projects;
 
-  return (
-    <>
+  // return (
+  //   <>
 
+  //     <section id="SkillsAndProjects1">
+  //       <div className="skills-text-main-div">
+  //         <h1 class="gradient-text">Skills</h1>
+  //       </div>
+  //     </section>
+  //     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 pl-5">
+
+  //       {skills.map((skill, index) => {
+  //         return <div><SkillCard {...skill} /></div>;
+  //       })}
+  //     </div>
+
+
+  //     <section id="SkillsAndProjects">
+  //       <div className="skills-text-main-div">
+  //         <h1 className="gradient-text">PROJECTS</h1>
+  //       </div>
+
+  //       <div className="skills-switch-div">
+  //         <div className="btn-group btn-group-toggle" data-toggle="buttons" >
+  //           <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white " onClick={() => handleFilterChange("Web Development")}>
+  //             <div id='webdev' className="container">
+  //               <span className="react-logo">
+  //                 <span className="nucleo"></span>
+  //               </span>
+  //             </div>
+  //           </button>
+  //           <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
+  //             <img id='ml' src={machinelearninglogo} alt="Machine-Learning" />
+  //           </button>
+  //           <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
+  //             <img id='blockchain' src={blockchainlogo} alt="Blockchain" />
+  //           </button>
+  //           <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("miscellaneous")}>
+  //             <img id='misc' src={idealogo} alt="idea" />
+  //           </button>
+  //         </div>
+  //       </div>
+
+  //       {filter && (
+  //         <div className="text-center mt-4 mb-2">
+  //           <h2 className="text-4xl font-bold">{filter.toUpperCase()}</h2>
+  //         </div>
+  //       )}
+
+  //       <div class="project-card-super grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-4 md:gap-5">
+  //         {filteredProjects.map((project, index) => (
+  //           <div key={index}>
+  //             <ProjectCard
+  //               {...project}
+  //             />
+  //           </div>
+  //         ))}
+  //       </div>
+  //     </section>
+  //   </>
+  // );
+
+  const MobileSkillsAndProjects = () => (
+    <>
       <section id="SkillsAndProjects1">
         <div className="skills-text-main-div">
-          <h1 class="gradient-text">Skills</h1>
+        <h1 className="gradient-text" style={{ fontSize: '70px' }}>Skills</h1>
         </div>
       </section>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 pl-5">
-
+      <div className="grid grid-cols-1 gap-4 pl-5">
         {skills.map((skill, index) => {
-          return <div><SkillCard {...skill} /></div>;
+          return <div key={index}><SkillCard_m {...skill} /></div>;
         })}
       </div>
-
-
       <section id="SkillsAndProjects">
         <div className="skills-text-main-div">
-          <h1 className="gradient-text">PROJECTS</h1>
+        <h1 className="gradient-text" style={{ fontSize: '70px' }}>Projects</h1>
         </div>
-
         <div className="skills-switch-div">
-          <div className="btn-group btn-group-toggle" data-toggle="buttons" >
-            <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white " onClick={() => handleFilterChange("Web Development")}>
+          <div className="btn-group btn-group-toggle" data-toggle="buttons">
+            <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white" onClick={() => handleFilterChange("Web Development")}>
               <div id='webdev' className="container">
                 <span className="react-logo">
                   <span className="nucleo"></span>
@@ -375,26 +447,76 @@ function SkillsAndProjects() {
             </button>
           </div>
         </div>
-
         {filter && (
           <div className="text-center mt-4 mb-2">
             <h2 className="text-4xl font-bold">{filter.toUpperCase()}</h2>
           </div>
         )}
-
-        <div class="project-card-super grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-4 md:gap-5">
+        <div className="project-card-super grid grid-cols-1 gap-4">
           {filteredProjects.map((project, index) => (
             <div key={index}>
-              <ProjectCard
-                {...project}
-              />
+              <ProjectCard_m {...project} />
             </div>
           ))}
         </div>
       </section>
     </>
   );
-}
+
+  const DesktopSkillsAndProjects = () => (
+    <>
+      <section id="SkillsAndProjects1">
+        <div className="skills-text-main-div">
+          <h1 className="gradient-text">Skills</h1>
+        </div>
+      </section>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 pl-5">
+        {skills.map((skill, index) => {
+          return <div key={index}><SkillCard {...skill} /></div>;
+        })}
+      </div>
+      <section id="SkillsAndProjects">
+        <div className="skills-text-main-div">
+          <h1 className="gradient-text">PROJECTS</h1>
+        </div>
+        <div className="skills-switch-div">
+          <div className="btn-group btn-group-toggle" data-toggle="buttons">
+            <button className="btn btn-lg rounded-left some-div active block mx-2 bg-dark text-white" onClick={() => handleFilterChange("Web Development")}>
+              <div id='webdev' className="container">
+                <span className="react-logo">
+                  <span className="nucleo"></span>
+                </span>
+              </div>
+            </button>
+            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("machine learning")}>
+              <img id='ml' src={machinelearninglogo} alt="Machine-Learning" />
+            </button>
+            <button className="btn btn-outline-dark btn-lg rounded-0 some-div active block mx-2 bg-dark text-white flex items-center justify-center" onClick={() => handleFilterChange("blockchain")}>
+              <img id='blockchain' src={blockchainlogo} alt="Blockchain" />
+            </button>
+            <button className="btn btn-outline-dark btn-lg rounded-right some-div active flex items-center justify-center" onClick={() => handleFilterChange("miscellaneous")}>
+              <img id='misc' src={idealogo} alt="idea" />
+            </button>
+          </div>
+        </div>
+        {filter && (
+          <div className="text-center mt-4 mb-2">
+            <h2 className="text-4xl font-bold">{filter.toUpperCase()}</h2>
+          </div>
+        )}
+        <div className="project-card-super grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-4 md:gap-5">
+          {filteredProjects.map((project, index) => (
+            <div key={index}>
+              <ProjectCard {...project} />
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+
+  return isMobile ? <MobileSkillsAndProjects /> : <DesktopSkillsAndProjects />;
+};
 
 export default SkillsAndProjects;
 
