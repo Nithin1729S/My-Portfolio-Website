@@ -139,74 +139,117 @@ animate();
 }
 else{
   const canvas = document.getElementById("canvas1");
-const ctx = canvas.getContext('2d');
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-
-let particleArray = [];
-const speed = 0.1; // Speed multiplier to control particle speed
-
-ctx.font = '90px Arial';
-ctx.fillText('A', 20, 50);
-ctx.strokeRect(0, 0, 100, 100);
-
-class Particle {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.size = 1;
-    this.baseX = this.x;
-    this.baseY = this.y;
-    this.density = (Math.random() * 9) + 1;
-    this.directionX = (Math.random() * 2 - 1) * speed; // random direction on X-axis scaled by speed
-    this.directionY = (Math.random() * 2 - 1) * speed; // random direction on Y-axis scaled by speed
+  const ctx = canvas.getContext('2d');
+  
+  // Adjust canvas size for high-DPI displays
+  function adjustCanvasSize() {
+    const ratio = window.devicePixelRatio || 1;
+    canvas.width = canvas.clientWidth * ratio;
+    canvas.height = canvas.clientHeight * ratio;
+    ctx.scale(ratio, ratio);
   }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.closePath();
-    ctx.fill();
-  }
-  update() {
-    // Random movement
-    this.x += this.directionX;
-    this.y += this.directionY;
-
-    // Boundary check and bounce back
-    if (this.x + this.size > canvas.width || this.x - this.size < 0) {
-      this.directionX = -this.directionX;
+  
+  // Call the function to adjust canvas size
+  adjustCanvasSize();
+  
+  window.addEventListener('resize', adjustCanvasSize);
+  
+  let particleArray = [];
+  const speed = 0.5; // Speed multiplier to control particle speed
+  
+  const mouse = {
+    x: null,
+    y: null,
+    radius: 100 // Adjust the interaction radius as needed
+  };
+  
+  window.addEventListener('mousemove', function(event) {
+    mouse.x = event.x;
+    mouse.y = event.y;
+  });
+  
+  ctx.font = '90px Arial';
+  ctx.fillText('A', 20, 50);
+  ctx.strokeRect(0, 0, 100, 100);
+  
+  class Particle {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.size = 1;
+      this.baseX = this.x;
+      this.baseY = this.y;
+      this.density = (Math.random() * 9) + 1;
+      this.directionX = (Math.random() * 2 - 1) * speed; // random direction on X-axis scaled by speed
+      this.directionY = (Math.random() * 2 - 1) * speed; // random direction on Y-axis scaled by speed
     }
-    if (this.y + this.size > canvas.height || this.y - this.size < 0) {
-      this.directionY = -this.directionY;
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.fill();
+    }
+    update() {
+      // Check mouse interaction
+      let dx = mouse.x - this.x;
+      let dy = mouse.y - this.y;
+      let distance = Math.sqrt(dx * dx + dy * dy);
+      let forceDirectionX = dx / distance;
+      let forceDirectionY = dy / distance;
+      let maxDistance = mouse.radius;
+      let force = (maxDistance - distance) / maxDistance;
+      let directionX = forceDirectionX * force * this.density;
+      let directionY = forceDirectionY * force * this.density;
+  
+      if (distance < mouse.radius) {
+        this.x -= directionX;
+        this.y -= directionY;
+      } else {
+        // Random movement
+        this.x += this.directionX;
+        this.y += this.directionY;
+      }
+  
+      // Boundary check and bounce back
+      if (this.x + this.size > canvas.width || this.x - this.size < 0) {
+        this.directionX = -this.directionX;
+      }
+      if (this.y + this.size > canvas.height || this.y - this.size < 0) {
+        this.directionY = -this.directionY;
+      }
+  
+      // Ensure particles return to their base position slowly if no interaction
+      if (this.x !== this.baseX) {
+        let dx = this.x - this.baseX;
+        this.x -= dx / 50;
+      }
+      if (this.y !== this.baseY) {
+        let dy = this.y - this.baseY;
+        this.y -= dy / 50;
+      }
     }
   }
-}
-
-function init() {
-  particleArray = [];
-  for (let i = 0; i < 50; i++) {
-    let x = Math.random() * canvas.width;
-    let y = Math.random() * canvas.height;
-    particleArray.push(new Particle(x, y));
+  
+  function init() {
+    particleArray = [];
+    for (let i = 0; i < 100; i++) {
+      let x = Math.random() * canvas.width / window.devicePixelRatio;
+      let y = Math.random() * canvas.height / window.devicePixelRatio;
+      particleArray.push(new Particle(x, y));
+    }
   }
-}
-init();
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (const element of particleArray) {
-    element.draw();
-    element.update();
+  init();
+  
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const element of particleArray) {
+      element.draw();
+      element.update();
+    }
+    requestAnimationFrame(animate);
   }
-  requestAnimationFrame(animate);
-}
-animate();
+  animate();
+  
 
     
 }
