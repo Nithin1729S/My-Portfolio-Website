@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import ProjectCard from '../Cards/ProjectCard';
-import ProjectCard_m from '../Cards/ProjectCard_m';
+import ProjectCard_M from '../Cards/ProjectCard_m';
 import SkillCard from '../Cards/SkillCard';
-import SkillCard_m from '../Cards/SkillCard_m';
+import SkillCard_M from '../Cards/SkillCard_m';
 import githubLogo from '../components/images/github-logo.png';
 import liveLogo from '../components/images/live.png';
 import androidFull from '../components/images/androidFull.png';
@@ -418,9 +418,9 @@ function SkillsAndProjects() {
         <h1 className="gradient-text" style={{ fontSize: '70px' }}>Skills</h1>
         </div>
       </section>
-      <div className="grid grid-cols-1 gap-4 pl-7">
+      <div className="grid grid-cols-2 gap-4 pr-9">
         {skills.map((skill, index) => {
-          return <div key={index}><SkillCard_m {...skill} /></div>;
+          return <div key={index}><SkillCard_M {...skill} /></div>;
         })}
       </div>
       <section id="SkillsAndProjects">
@@ -436,7 +436,7 @@ function SkillsAndProjects() {
         <div className="project-card-super grid grid-cols-1 gap-4">
           {filteredProjects.map((project, index) => (
             <div key={index}>
-              <ProjectCard_m {...project} />
+              <ProjectCard_M {...project} />
             </div>
           ))}
         </div>

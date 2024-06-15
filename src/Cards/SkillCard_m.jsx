@@ -12,16 +12,19 @@ $(document).ready(function(){
 
 function SkillCard(props) {
   return (
-    <div className="card bg-transparent border-dark flex flex-col items-center p-4 mt-1 ml-9  w-64 h-55">
-      <div className="card-body flex flex-col items-center">
-        <a href={props.link} target="_blank" className="block">
-          <img src={props.imgSrc} alt={props.alt} className="mx-auto" />
-        </a>
-        <h2 className="text-lg font-bold mt-2">{props.title}</h2>
-      </div>
-    </div>
+<div className="card bg-transparent border-dark flex justify-center items-center p-4 mt-1 ml-9 w-32 h-20">
+  <div className="card-body text-center">
+    <a href={props.link} target="_blank" className="block">
+      <img src={props.imgSrc} alt={props.alt} className="mx-auto h-8 w-auto" />
+    </a>
+    <h2 className="text-sm font-bold mt-2">{props.title}</h2>
+  </div>
+</div>
+
+
   );
 }
+
 
 
 
