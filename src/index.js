@@ -27,12 +27,15 @@ const mouse = {
 }
 
 if (!isMobileDevice()) {
-    /// Assuming you have a canvas context 'ctx' and a mouse object defined somewhere
-// in your existing code
-
-// Assuming you have a canvas context 'ctx' and a mouse object defined somewhere
-// in your existing code
-
+   
+function adjustCanvasSize() {
+  const ratio = window.devicePixelRatio || 1;
+  canvas.width = canvas.clientWidth * ratio;
+  canvas.height = canvas.clientHeight * ratio;
+  ctx.scale(ratio, ratio);
+}
+adjustCanvasSize();
+window.addEventListener('resize', adjustCanvasSize);
 window.addEventListener('mousemove', function(event){
   mouse.x = event.x;
   mouse.y = event.y;
