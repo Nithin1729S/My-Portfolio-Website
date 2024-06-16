@@ -155,7 +155,7 @@ else{
   window.addEventListener('resize', adjustCanvasSize);
   
   let particleArray = [];
-  const speed = 0.1; // Speed multiplier to control particle speed
+  const speed = 0.2; // Speed multiplier to control particle speed
   
   ctx.font = '90px Arial';
   ctx.fillText('A', 20, 50);
