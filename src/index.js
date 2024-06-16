@@ -108,7 +108,9 @@ if (!isMobileDevice()) {
   function init() {
     particleArray = [];
     let randomMoveSpeed = 0.5; // Control the speed of random movements here
-    for (let i = 0; i < 500; i++) {
+    let numberOfParticles = Math.floor((canvas.width * canvas.height) / 3000); 
+    for (let i = 0; i < numberOfParticles; i++) {
+      
       let x = Math.random() * canvas.width;
       let y = Math.random() * canvas.height;
       particleArray.push(new Particle(x, y, randomMoveSpeed));
@@ -146,18 +148,7 @@ else {
   const canvas = document.getElementById("canvas1");
   const ctx = canvas.getContext('2d');
 
-  // Adjust canvas size for high-DPI displays
-  function adjustCanvasSize() {
-    const ratio = window.devicePixelRatio || 1;
-    canvas.width = canvas.clientWidth * ratio;
-    canvas.height = canvas.clientHeight * ratio;
-    ctx.setTransform(ratio, 0, 0, ratio, 0, 0); // Use setTransform to ensure scaling
-  }
-
-  // Call the function to adjust canvas size
-  adjustCanvasSize();
-
-  window.addEventListener('resize', adjustCanvasSize);
+  
 
   let particleArray = [];
   const speed = 0.3; // Speed multiplier to control particle speed
@@ -200,14 +191,27 @@ else {
 
   function init() {
     particleArray = [];
-    for (let i = 0; i < 100; i++) {
+    let numberOfParticles = Math.floor((canvas.width * canvas.height) / 10000); 
+    for (let i = 0; i < numberOfParticles; i++) {
       let x = Math.random() * canvas.width / (window.devicePixelRatio || 1);
       let y = Math.random() * canvas.height / (window.devicePixelRatio || 1);
       particleArray.push(new Particle(x, y));
     }
   }
   init();
+  // Adjust canvas size for high-DPI displays
+  function adjustCanvasSize() {
+    const ratio = window.devicePixelRatio || 1;
+    canvas.width = canvas.clientWidth * ratio;
+    canvas.height = canvas.clientHeight * ratio;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0); // Use setTransform to ensure scaling
+    init()
+  }
 
+  // Call the function to adjust canvas size
+  adjustCanvasSize();
+
+  window.addEventListener('resize', adjustCanvasSize);
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (const element of particleArray) {
