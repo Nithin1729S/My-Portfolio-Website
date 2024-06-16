@@ -16,37 +16,27 @@ let particleArray = [];
 
 // Function to detect mobile devices
 function isMobileDevice() {
-    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 }
 
 // Handle mouse
 const mouse = {
-    x: null,
-    y: null,
-    radius: 200
+  x: null,
+  y: null,
+  radius: 200
 }
 
 if (!isMobileDevice()) {
-   
-function adjustCanvasSize() {
-  const ratio = window.devicePixelRatio || 1;
-  canvas.width = canvas.clientWidth * ratio;
-  canvas.height = canvas.clientHeight * ratio;
-  ctx.scale(ratio, ratio);
-}
-adjustCanvasSize();
-window.addEventListener('resize', adjustCanvasSize);
-window.addEventListener('mousemove', function(event){
-  mouse.x = event.x;
-  mouse.y = event.y;
-});
 
-ctx.font = '90px';
-ctx.fillText('A', 20, 50);
-ctx.strokeRect(0, 0, 100, 100);
 
-class Particle {
-  constructor(x, y, randomMoveSpeed) {
+
+
+  ctx.font = '90px';
+  ctx.fillText('A', 20, 50);
+  ctx.strokeRect(0, 0, 100, 100);
+
+  class Particle {
+    constructor(x, y, randomMoveSpeed) {
       this.x = x;
       this.y = y;
       this.size = 1;
@@ -56,14 +46,14 @@ class Particle {
       this.randomMoveSpeed = randomMoveSpeed;
       this.velocityX = (Math.random() - 0.5) * randomMoveSpeed;
       this.velocityY = (Math.random() - 0.5) * randomMoveSpeed;
-  }
-  draw() {
+    }
+    draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.closePath();
       ctx.fill();
-  }
-  update() {
+    }
+    update() {
       let dx = mouse.x - this.x;
       let dy = mouse.y - this.y;
       let distance = Math.sqrt(dx * dx + dy * dy);
@@ -75,17 +65,17 @@ class Particle {
       let directionY = forceDirectionY * force * this.density;
 
       if (distance < mouse.radius) {
-          this.x -= directionX;
-          this.y -= directionY;
+        this.x -= directionX;
+        this.y -= directionY;
       } else {
-          if (this.x !== this.baseX) {
-              let dx = this.x - this.baseX;
-              this.x -= dx / 50;
-          }
-          if (this.y !== this.baseY) {
-              let dy = this.y - this.baseY;
-              this.y -= dy / 50;
-          }
+        if (this.x !== this.baseX) {
+          let dx = this.x - this.baseX;
+          this.x -= dx / 50;
+        }
+        if (this.y !== this.baseY) {
+          let dy = this.y - this.baseY;
+          this.y -= dy / 50;
+        }
       }
 
       // Random movement based on velocity
@@ -97,53 +87,65 @@ class Particle {
 
       // Ensure particles stay within canvas boundaries
       if (this.x < 0) {
-          this.x = 0;
-          this.velocityX *= -1;
+        this.x = 0;
+        this.velocityX *= -1;
       }
       if (this.x > canvas.width) {
-          this.x = canvas.width;
-          this.velocityX *= -1;
+        this.x = canvas.width;
+        this.velocityX *= -1;
       }
       if (this.y < 0) {
-          this.y = 0;
-          this.velocityY *= -1;
+        this.y = 0;
+        this.velocityY *= -1;
       }
       if (this.y > canvas.height) {
-          this.y = canvas.height;
-          this.velocityY *= -1;
+        this.y = canvas.height;
+        this.velocityY *= -1;
       }
+    }
   }
-}
 
-function init() {
-  particleArray = [];
-  let randomMoveSpeed = 0.5; // Control the speed of random movements here
-  for (let i = 0; i < 500; i++) {
+  function init() {
+    particleArray = [];
+    let randomMoveSpeed = 0.5; // Control the speed of random movements here
+    for (let i = 0; i < 500; i++) {
       let x = Math.random() * canvas.width;
       let y = Math.random() * canvas.height;
       particleArray.push(new Particle(x, y, randomMoveSpeed));
+    }
   }
-}
-init();
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (const element of particleArray) {
+  init();
+  function adjustCanvasSize() {
+    const ratio = window.devicePixelRatio || 1;
+    canvas.width = canvas.clientWidth * ratio;
+    canvas.height = canvas.clientHeight * ratio;
+    ctx.scale(ratio, ratio);
+    init()
+  }
+  adjustCanvasSize();
+  window.addEventListener('resize', adjustCanvasSize);
+  window.addEventListener('mousemove', function (event) {
+    mouse.x = event.x;
+    mouse.y = event.y;
+  });
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const element of particleArray) {
       element.draw();
       element.update();
+    }
+    requestAnimationFrame(animate);
   }
-  requestAnimationFrame(animate);
-}
-animate();
+  animate();
 
 
 
 
 }
-else{
+else {
   const canvas = document.getElementById("canvas1");
   const ctx = canvas.getContext('2d');
-  
+
   // Adjust canvas size for high-DPI displays
   function adjustCanvasSize() {
     const ratio = window.devicePixelRatio || 1;
@@ -151,19 +153,19 @@ else{
     canvas.height = canvas.clientHeight * ratio;
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0); // Use setTransform to ensure scaling
   }
-  
+
   // Call the function to adjust canvas size
   adjustCanvasSize();
-  
+
   window.addEventListener('resize', adjustCanvasSize);
-  
+
   let particleArray = [];
   const speed = 0.3; // Speed multiplier to control particle speed
-  
+
   ctx.font = '90px Arial';
   ctx.fillText('A', 20, 50);
   ctx.strokeRect(0, 0, 100, 100);
-  
+
   class Particle {
     constructor(x, y) {
       this.x = x;
@@ -185,7 +187,7 @@ else{
       // Random movement
       this.x += this.directionX;
       this.y += this.directionY;
-  
+
       // Boundary check and bounce back
       if (this.x + this.size > canvas.width / (window.devicePixelRatio || 1) || this.x - this.size < 0) {
         this.directionX = -this.directionX;
@@ -195,7 +197,7 @@ else{
       }
     }
   }
-  
+
   function init() {
     particleArray = [];
     for (let i = 0; i < 100; i++) {
@@ -205,7 +207,7 @@ else{
     }
   }
   init();
-  
+
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (const element of particleArray) {
@@ -215,11 +217,11 @@ else{
     requestAnimationFrame(animate);
   }
   animate();
-  
 
-    
+
+
 }
 
 root.render(
-    <App />
+  <App />
 );
