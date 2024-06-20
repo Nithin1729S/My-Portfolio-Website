@@ -7,9 +7,32 @@ import githubLogo from '../components/images/github-logo.png';
 import liveLogo from '../components/images/live.png';
 import androidFull from '../components/images/androidFull.png';
 import java from '../components/images/java.png';
+import oops from '../components/images/oops.png';
 import firebase from '../components/images/firebase_google.png';
+import tailwind from '../components/images/tailwind.png';
+import cpp from '../components/images/cpp.png';
+import c from '../components/images/c.png';
+import javascript from '../components/images/javascript.png';
+import typescript from '../components/images/typescript.png';
+import react2 from '../components/images/react2.png';
+import metamask from '../components/images/metamask.png';
+import express from '../components/images/express.png';
+import postman from '../components/images/postman.png';
+import node from '../components/images/node.png';
+import git from '../components/images/git.png';
+import github from '../components/images/github.png';
+import mysql from '../components/images/mysql.png';
+import html2 from '../components/images/html2.png';
+import css2 from '../components/images/css2.png';
+import ethereum from '../components/images/ethereum.png';
+import solidity from '../components/images/solidity.png';
+import postgresql from '../components/images/postgresql.png';
 import python from '../components/images/python.png';
 import pyTorch from '../components/images/pytorch.png';
+import ml from '../components/images/ml.png';
+import django from '../components/images/django.png';
+import docker from '../components/images/docker.png';
+import flask from '../components/images/flask.png';
 import tailwindcss from '../components/images/tailwindcss.png';
 import mongodb from '../components/images/mongodb.png';
 import nodejs from '../components/images/nodejs.png';
@@ -74,19 +97,20 @@ function SkillsAndProjects() {
     {
       id: "blockchain",
       title: "Web3 Vault Dapp",
-      desc: "A Fullstack Event Management Application",
-      link: "https://github.com/pranav-salunkhe/wwwE",
+      desc: "Decentralized password manager, compiled in Remix IDE and deployed on Sepolia TestNet",
+      link1: "https://github.com/Nithin1729S/Web3-Vault-dApp",
+      link2: "https://web3vault.vercel.app/",
       imgSrc: githubLogo,
       imgSrc1: liveLogo,
       alt: "External Link Logo",
-      ts1: tailwindcss,
-      wts1: "tailwindcss",
-      ts2: mongodb,
-      wts2: "mongodb",
-      ts3: nodejs,
-      wts3: "nodejs",
-      ts4: react,
-      wts4: "react"
+      ts1: ethereum,
+      wts1: "ethereum",
+      ts2: react,
+      wts2: "react",
+      ts3: metamask,
+      wts3: "metamask",
+      // ts4: react,
+      // wts4: "react"
     },
     {
       id: "Web Development",
@@ -225,125 +249,126 @@ function SkillsAndProjects() {
 
   const skills = [
     {
+      title: 'C',
+      imgSrc: c
+    },
+    {
       title: 'C++',
-      link: 'jo',
-      imgSrc: java
+      imgSrc: cpp
     },
     {
       title: 'Python',
-      link: 'jo',
-      imgSrc: java
+      imgSrc: python
     },
     {
       title: 'Java',
-      link: 'jo',
       imgSrc: java
     },
     {
       title: 'Solidity',
-      link: 'jo',
-      imgSrc: java
+      imgSrc: solidity
     },
     {
       title: 'Javascript',
-      link: 'jo',
-      imgSrc: java
+      imgSrc: javascript
     },
     {
       title: 'OOPS',
-      link: 'jo',
-      imgSrc: java
+      imgSrc: oops
     },
     {
       title: 'Machine Learning',
-      link: 'jo',
-      imgSrc: java
+      imgSrc: ml
     },
     {
       title: 'Blockchain',
-      link: 'jo',
-      imgSrc: java
+      imgSrc: ethereum
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'Django',
+      imgSrc: django
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'Flask',
+      imgSrc: flask
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'HTML',
+      imgSrc: html2
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'CSS',
+      imgSrc: css2
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'TailwindCSS',
+      imgSrc: tailwind
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'MySQL',
+      imgSrc: mysql
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'MongoDB',
+      imgSrc: mongodb
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'TypeScript',
+      imgSrc: typescript
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'React',
+      imgSrc: react
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'Express',
+      imgSrc: express
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'NodeJS',
+      imgSrc: node
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'Git',
+      imgSrc: git
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'GitHub',
+      imgSrc: github
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'Docker',
+      imgSrc: docker
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'Firebase',
+      imgSrc: firebase
     },
     {
-      title: 'Cryptography',
-      link: 'jo',
-      imgSrc: java
+      title: 'Postman',
+      imgSrc: postman
     },
+    {
+      title: 'PyTorch',
+      imgSrc: firebase
+    },
+    {
+      title: 'Postgresql',
+      imgSrc: postgresql
+    },
+    {
+      title: 'Tensorflow',
+      imgSrc: firebase
+    },
+    {
+      title: 'Tensorflow',
+      imgSrc: firebase
+    },
+    {
+      title: 'Tensorflow',
+      imgSrc: firebase
+    },
+    
 
     // Add more skills here
   ];
