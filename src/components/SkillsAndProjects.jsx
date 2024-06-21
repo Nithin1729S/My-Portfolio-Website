@@ -12,6 +12,7 @@ import firebase from '../components/images/firebase_google.png';
 import tailwind from '../components/images/tailwind.png';
 import cpp from '../components/images/cpp.png';
 import c from '../components/images/c.png';
+import python2 from '../components/images/python2.png';
 import javascript from '../components/images/javascript.png';
 import typescript from '../components/images/typescript.png';
 import react2 from '../components/images/react2.png';
@@ -32,6 +33,8 @@ import pyTorch from '../components/images/pytorch.png';
 import ml from '../components/images/ml.png';
 import django from '../components/images/django.png';
 import docker from '../components/images/docker.png';
+import auth0 from '../components/images/auth0.png';
+import huggingFace from '../components/images/huggingFace.png';
 import flask from '../components/images/flask.png';
 import tailwindcss from '../components/images/tailwindcss.png';
 import mongodb from '../components/images/mongodb.png';
@@ -72,23 +75,27 @@ function SkillsAndProjects() {
       imgSrc: githubLogo,
       imgSrc1: liveLogo,
       alt: "Link Logo",
-      ts1: python,
+      ts1: python2,
       wts1: "python",
       ts2: pyTorch,
-      wts2: "pyTorch"
+      wts2: "pyTorch",
+      ts3: flask,
+      wts3: "flask",
+      ts4: tailwind,
+      wts4: "tailwind"
     },
     {
       id: "Web Development",
-      title: "Food Ordering Application",
+      title: "Pixel Plate",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
       imgSrc: githubLogo,
       imgSrc1: liveLogo,
       alt: "GitHub Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
+      ts1: typescript,
+      wts1: "typescript",
+      ts2: react,
+      wts2: "react",
       ts3: firebase,
       wts3: "firebase",
       ts4: firebase,
@@ -115,21 +122,21 @@ function SkillsAndProjects() {
     {
       id: "Web Development",
       title: "AniTalk",
-      desc: "An app that helps you locate profs during working hours",
+      desc: "An Anime Discussion Forum Web Application",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
       imgSrc: githubLogo,
       imgSrc1: liveLogo,
       alt: "GitHub Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
+      ts1: python,
+      wts1: "python",
+      ts2: django,
+      wts2: "django",
+      ts3: postgresql,
+      wts3: "postgresql"
     },
     {
       id: "machine learning",
-      title: "ml2",
+      title: "Image Caption Generator",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
       imgSrc: githubLogo,
@@ -144,17 +151,17 @@ function SkillsAndProjects() {
     },
     {
       id: "blockchain",
-      title: "bc2",
+      title: "X Dapp",
       desc: "An app that helps you locate profs during working hours",
       link: "https://github.com/pranav-salunkhe/ProfFinder",
       imgSrc: githubLogo,
       alt: "GitHub Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
+      ts1: ethereum,
+      wts1: "ethereum",
+      ts2: react,
+      wts2: "react",
+      ts3: metamask,
+      wts3: "metamask"
     },
     {
       id: "Web Development",
