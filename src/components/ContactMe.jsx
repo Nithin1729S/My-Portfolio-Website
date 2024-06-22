@@ -15,13 +15,13 @@ function ContactMe(props) {
           <span>Know More About Me:</span>
         </div>
         <div className='contact-me-links' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2px' }}>
-          <a href="mailto:sureshnithin1729@gmail.com" target='_blank'><img src={mailLogo} alt={props.Alt} /></a>
-          <a href="https://www.linkedin.com/in/nithin1729s/" target='_blank'><img src={linkedInLogo} alt={props.Alt} /></a>
-          <a href="https://github.com/Nithin1729S" target='_blank'><img src={gitHubLogo} alt={props.Alt} /></a>
-          <a href="https://x.com/Nithin1729S" target='_blank'><img src={xLogo} alt={props.Alt} /></a>
-          <a href="https://leetcode.com/u/sureshnithin1729/" target='_blank'><img src={leetcodeLogo} alt={props.Alt} /></a>
-          <a href="https://codeforces.com/profile/sureshnithin1729" target='_blank'><img src={codeforcesLogo} alt={props.Alt} /></a>
-          <a href="https://codeforces.com/profile/sureshnithin1729" target='_blank'><img src={mediumLogo} alt={props.Alt} /></a>
+          <a href="mailto:sureshnithin1729@gmail.com" target='_blank' rel="noreferrer"><img src={mailLogo} alt={props.Alt} /></a>
+          <a href="https://www.linkedin.com/in/nithin1729s/" target='_blank' rel="noreferrer" ><img src={linkedInLogo} alt={props.Alt} /></a>
+          <a href="https://github.com/Nithin1729S" target='_blank' rel="noreferrer" ><img src={gitHubLogo} alt={props.Alt} /></a>
+          <a href="https://x.com/Nithin1729S" target='_blank' rel="noreferrer"><img src={xLogo} alt={props.Alt} /></a>
+          <a href="https://leetcode.com/u/sureshnithin1729/" target='_blank' rel="noreferrer" ><img src={leetcodeLogo} alt={props.Alt} /></a>
+          <a href="https://codeforces.com/profile/sureshnithin1729" target='_blank' rel="noreferrer"><img src={codeforcesLogo} alt={props.Alt} /></a>
+          {/* <a href="https://codeforces.com/profile/sureshnithin1729" target='_blank'><img src={mediumLogo} alt={props.Alt} /></a> */}
         </div>
         <div>
         copyright 2024
