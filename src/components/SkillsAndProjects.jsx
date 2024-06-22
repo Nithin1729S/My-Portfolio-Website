@@ -10,6 +10,9 @@ import idealogo from '../components/images/idea.png';
 import skills from './data/skills'
 import projects from './data/projects'
 
+
+
+
 function SkillsAndProjects() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [filter, setFilter] = useState(null);
@@ -37,7 +40,7 @@ function SkillsAndProjects() {
     <>
       <section id="SkillsAndProjects1">
         <div className="skills-text-main-div">
-          <h1 className="gradient-text" style={{ fontSize: '70px' }}>Skills</h1>
+          <h1 className="gradient-text" style={{ fontSize: '70px' }} >Skills</h1>
         </div>
       </section>
       <div className="grid grid-cols-2 gap-4 pr-9">
@@ -70,7 +73,7 @@ function SkillsAndProjects() {
     <>
       <section id="SkillsAndProjects1">
         <div className="skills-text-main-div">
-          <h1 className="gradient-text">Skills</h1>
+          <h1 className="gradient-text" >Skills</h1>
         </div>
       </section>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 pl-5">
@@ -79,8 +82,8 @@ function SkillsAndProjects() {
         })}
       </div>
       <section id="SkillsAndProjects">
-        <div className="skills-text-main-div">
-          <h1 className="gradient-text">PROJECTS</h1>
+        <div className="skills-text-main-div" >
+          <h1  className="gradient-text" >PROJECTS</h1>
         </div>
         <div className="skills-switch-div">
           <div className="btn-group btn-group-toggle" data-toggle="buttons">

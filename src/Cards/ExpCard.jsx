@@ -15,7 +15,7 @@ function ExpCard(props) {
             <time className='fw-lighter'>{props.Time}</time>
           </div>
           <div className="card-text exp-card-text">
-          <h7 className='fw-bold fst-italic'>{props.Position}</h7><br></br>
+          <h6 className='fw-bold fst-italic'>{props.Position}</h6><br></br>
             {props.WorkDone1}
             <br></br>
             {props.WorkDone2}
