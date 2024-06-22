@@ -106,7 +106,7 @@ if (!isMobileDevice()) {
 
   function init() {
     particleArray = [];
-    let randomMoveSpeed = 0.5; // Control the speed of random movements here
+    let randomMoveSpeed = 0.2; // Control the speed of random movements here
     let numberOfParticles = Math.floor((canvas.width * canvas.height) / 3000); 
     for (let i = 0; i < numberOfParticles; i++) {
       
