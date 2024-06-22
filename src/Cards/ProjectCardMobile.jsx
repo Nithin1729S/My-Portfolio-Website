@@ -17,12 +17,12 @@ function ProjectCard_m(props) {
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <h2 className='fw-bold' style={{ minWidth: '250px' }}>{props.title}</h2>
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
-                        <a href={props.link1} target="_blank">
-                            <img title='Source Code' src={props.imgSrc} alt={props.alt} />
+                        <a href={props.link1} target="_blank" rel="noreferrer">
+                            <img title='Source Code' src={props.imgSrc} alt={props.alt1} />
                         </a>
                         {props.imgSrc1 && (
-                            <a href={props.link2} target="_blank">
-                                <img title='Live Demo' style={{ width: '40px', height: '40px', marginLeft: '20px' }} src={props.imgSrc1} alt={props.alt} />
+                            <a href={props.link2} target="_blank" rel="noreferrer">
+                                <img title='Live / Demo' style={{ width: '40px', height: '40px', marginLeft: '20px' }} src={props.imgSrc1} alt={props.alt2} />
                             </a>
                         )}
                     </div>
