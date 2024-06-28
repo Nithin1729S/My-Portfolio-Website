@@ -8,6 +8,7 @@ import firebase from '../images/firebase_google.png';
 import tailwind from '../images/tailwind.png';
 import cpp from '../images/cpp.png';
 import c from '../images/c.png';
+import streamlit from '../images/streamlit.png'
 import python2 from '../images/python2.png';
 import javascript from '../images/javascript.png';
 import typescript from '../images/typescript.png';
@@ -139,8 +140,8 @@ const skills = [
       imgSrc: postman
     },
     {
-      title: 'PyTorch',
-      imgSrc: firebase
+      title: 'Streamlit',
+      imgSrc: streamlit
     },
     {
       title: 'Postgresql',

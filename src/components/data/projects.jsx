@@ -101,7 +101,7 @@ const projects = [
       title: "AniTalk",
       desc: "An Anime Discussion Forum Web Application",
       link1: "https://github.com/Nithin1729S/AniTalk",
-      link2: "https://ani-talk-phi.vercel.app",
+      // link2: "https://ani-talk-phi.vercel.app",
       imgSrc: githubLogo,
       alt: "Github Logo",
       imgSrc1: liveLogo,
