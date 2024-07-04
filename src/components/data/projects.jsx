@@ -1,41 +1,29 @@
-import React, { useState, useEffect } from 'react';
 import githubLogo from '../images/github-logo.png';
 import liveLogo from '../images/live.png';
-import androidFull from '../images/androidFull.png';
-import java from '../images/java.png';
-import oops from '../images/oops.png';
-import firebase from '../images/firebase_google.png';
-import tailwind from '../images/tailwind.png';
-import cpp from '../images/cpp.png';
+import firebase from '../images/firebase.svg';
+import tailwind from '../images/tailwind.svg';
 import c from '../images/c.png';
-import python2 from '../images/python2.png';
-import javascript from '../images/javascript.png';
-import typescript from '../images/typescript.png';
+import python2 from '../images/python.svg';
+import javascript from '../images/javascript.svg';
+import typescript from '../images/typescript.svg';
 import metamask from '../images/metamask.png';
-import express from '../images/express.png';
-import postman from '../images/postman.png';
-import node from '../images/node.png';
-import git from '../images/git.png';
-import github from '../images/github.png';
-import mysql from '../images/mysql.png';
-import html2 from '../images/html2.png';
-import css2 from '../images/css2.png';
-import ethereum from '../images/ethereum.png';
-import solidity from '../images/solidity.png';
-import postgresql from '../images/postgresql.png';
-import python from '../images/python.png';
-import pyTorch from '../images/pytorch.png';
+import tkinter from '../images/tkinter.png';
+import node from '../images/node.svg';
+import mysql from '../images/mysql.svg';
+import ethereum from '../images/ethereum.svg';
+import postgresql from '../images/postgresql.svg';
+import python from '../images/python.svg';
+import pyTorch from '../images/pytorch.svg';
 import ml from '../images/ml.png';
-import django from '../images/django.png';
-import docker from '../images/docker.png';
+import django from '../images/django.svg';
 import auth0 from '../images/auth0.png';
-import huggingFace from '../images/huggingFace.png';
-import flask from '../images/flask.png';
-import mongodb from '../images/mongodb.png';
-import react from '../images/react.png';
-import machinelearninglogo from '../images/machine-learning.png';
-import blockchainlogo from '../images/blockchain.png';
-import idealogo from '../images/idea.png';
+import huggingFace from '../images/huggingFace.svg';
+import streamlit from '../images/streamlit.svg';
+import tensorflow from '../images/tensorflow.svg';
+import flask from '../images/flask.svg';
+import mongodb from '../images/mongodb.svg';
+import react from '../images/react.svg';
+import ros from '../images/ros.svg';
 
 const projects = [
 
@@ -61,7 +49,7 @@ const projects = [
     {
       id: "Web Development",
       title: "Pixel Plate",
-      desc: "An app that helps you locate profs during working hours",
+      desc: "A Full Stack Food Ordering Web Application built using the MERN stack, allows users to order food and manage their restaurants",
       link1: "https://github.com/Nithin1729S/Pixel-Plate",
       link2: "https://pixel-plate-frontend.onrender.com",
       imgSrc: githubLogo,
@@ -101,7 +89,7 @@ const projects = [
       title: "AniTalk",
       desc: "An Anime Discussion Forum Web Application",
       link1: "https://github.com/Nithin1729S/AniTalk",
-      // link2: "https://ani-talk-phi.vercel.app",
+      link2: "https://ani-talk-phi.vercel.app",
       imgSrc: githubLogo,
       alt: "Github Logo",
       imgSrc1: liveLogo,
@@ -116,7 +104,7 @@ const projects = [
     {
       id: "blockchain",
       title: "X Dapp",
-      desc: "An app that helps you locate profs during working hours",
+      desc: " A Decentralized X Application compiled in Remix IDE, deployed on Ethereum TestNet",
       link1: "https://github.com/Nithin1729S/X_dApp",
       link2: "https://x-nine-gold.vercel.app",
       imgSrc: githubLogo,
@@ -129,6 +117,23 @@ const projects = [
       wts2: "react",
       ts3: metamask,
       wts3: "metamask"
+    },
+    {
+      id: "machine learning",
+      title: "Interpret CXR",
+      desc: "Trained an NLP model using BioBERT and CLIP to generate radiology reports for given chest X-ray images.",
+      link1: "https://github.com/Nithin1729S/Interpret-CXR-BioBert-CLIP",
+      link2: "https://youtu.be/ypN_lqDMiQI",
+      imgSrc: githubLogo,
+      alt: "Github Logo",
+      imgSrc1: liveLogo,
+      alt1: "LiveDemo Logo",
+      ts1: python,
+      wts1: "python",
+      ts2: pyTorch,
+      wts2: "pytorch",
+      ts3: streamlit,
+      wts3: "streamlit"
     },
     {
       id: "Web Development",
@@ -152,67 +157,64 @@ const projects = [
     {
       id: "machine learning",
       title: "Image Caption Generator",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      desc: "An application to generate captions for images using a pre-trained Vision Encoder-Decoder model (ViT-GPT2).",
+      link1: "https://github.com/Nithin1729S/Image-Caption-Generator",
+      link2: "https://www.youtube.com/watch?v=UqufctfkBJ8",
       imgSrc: githubLogo,
       alt: "Github Logo",
       imgSrc1: liveLogo,
       alt1: "LiveDemo Logo",
       ts1: python,
       wts1: "python",
-      ts2: pyTorch,
-      wts2: "pytorch",
-      ts3: huggingFace,
-      wts3: "huggingFace"
+      ts2: huggingFace,
+      wts2: "hugginFace",
+      ts3: streamlit,
+      wts3: "streamlit"
     },
     {
       id: "machine learning",
       title: "Document Summarizer",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      desc: "A web application to summarize contents in a PDF",
+      link1: "https://github.com/Nithin1729S/Document-Summarization-Streamlit-Application",
+      link2: "https://youtu.be/GOR-pIVZ04w",
       imgSrc: githubLogo,
       alt: "Github Logo",
       imgSrc1: liveLogo,
       alt1: "LiveDemo Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
+      ts1: python,
+      wts1: "python",
+      ts2: huggingFace,
+      wts2: "huggingFace",
+      ts3: streamlit,
+      wts3: "streamlit"
     },
     {
       id: "Web Development",
       title: "Splitwise",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      desc: "A Splitwise-like payment application built using Node.js, EJS, and MySQL database.",
+      link1: "https://github.com/Nithin1729S/Splitwise-Application",
       imgSrc: githubLogo,
       alt: "Github Logo",
-      imgSrc1: liveLogo,
-      alt1: "LiveDemo Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
+      ts1: javascript,
+      wts1: "JavaScript",
+      ts2: node,
+      wts2: "nodejs",
+      ts3: mysql,
+      wts3: "mysql"
     },
     {
       id: "machine learning",
       title: "Brain Tumour Classification",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      desc: "An app that allows users to upload MRI scans to determine the type of brain tumour present",
+      link1: "https://github.com/Nithin1729S/Brain-Tumor-Classification",
+      link2: "https://youtu.be/8CGXEmEt4Sc",
       imgSrc: githubLogo,
       alt: "Github Logo",
       imgSrc1: liveLogo,
       alt1: "LiveDemo Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
+      ts1: python,
+      wts1: "python",
+      ts2: tensorflow,
       wts2: "java",
       ts3: firebase,
       wts3: "firebase"
@@ -220,138 +222,113 @@ const projects = [
     {
       id: "machine learning",
       title: "Medical Assistant",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      desc: "A web application that allows users to get consultations on Heart Diseases, Skin Cancer, and Tuberculosis.",
+      link1: "https://github.com/Nithin1729S/Medical-Assistant",
+      link2: "https://youtu.be/b8vmy75NC7w",
       imgSrc: githubLogo,
       alt: "Github Logo",
       imgSrc1: liveLogo,
       alt1: "LiveDemo Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
+      ts1: python,
+      wts1: "python",
+      ts2: tensorflow,
       wts2: "java",
       ts3: firebase,
       wts3: "firebase"
     },
+   
     {
       id: "machine learning",
-      title: "Interpret CXR",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      title: "Visual Hand Gesture Recognition",
+      desc: "An app that recognizes American Sign Language (ASL) gestures in real-time ",
+      link1: "https://github.com/Nithin1729S/Visual-Hand-Gesture-Recognition",
       imgSrc: githubLogo,
       alt: "Github Logo",
-      imgSrc1: liveLogo,
-      alt1: "LiveDemo Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
+      ts1: python,
+      wts1: "python",
+      ts2: tensorflow,
+      wts2: "tensorflow",
     },
     {
-      id: "machine learning",
-      title: "Medical Assistant",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      id: "miscellaneous",
+      title: "MazeSolving",
+      desc: "Maze Solving App coded in Python with a simple interface using tkinter, uses the BFS Algorithm to solve mazes effectively",
+      link1: "https://github.com/Nithin1729S/MazeSolving",
+      link2: "https://youtu.be/r2uFEnX93R4",
       imgSrc: githubLogo,
       alt: "Github Logo",
       imgSrc1: liveLogo,
       alt1: "LiveDemo Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
-    },
-    {
-      id: "machine learning",
-      title: "Medical Assistant",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
-      imgSrc: githubLogo,
-      alt: "Github Logo",
-      imgSrc1: liveLogo,
-      alt1: "LiveDemo Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
+      ts1: python,
+      wts1: "python",
+      ts2: tkinter,
+      wts2: "tkinter",
     },
     {
       id: "machine learning",
       title: "Llama 2 Chatbot",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      desc: "A chatbot created using the open-source Llama 2 LLM model from Meta hosted on Replicate Platform",
+      link1: "https://github.com/Nithin1729S/Llama-2-Chat-Bot",
+      link2: "https://youtu.be/wOMe5ffS3sQ",
       imgSrc: githubLogo,
       alt: "Github Logo",
       imgSrc1: liveLogo,
       alt1: "LiveDemo Logo",
-      ts1: androidFull,
+      ts1: python,
       wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
+      ts2: ml,
+      wts2: "ml",
     },
+    // {
+    //   id: "miscellaneous",
+    //   title: "Tic-Tac-Toe-Server-Client-Application",
+    //   desc: "A Client-Server application for playing the game of Tic-Tac-Toe between two players.",
+    //   link1: "https://github.com/Nithin1729S/Tic-Tac-Toe-Server-Client-Application",
+    //   imgSrc: githubLogo,
+    //   alt: "Github Logo",
+    //   ts1: c,
+    //   wts1: "c",
+    //   ts2: linux,
+    //   wts2: "linux",
+    // },
     {
       id: "miscellaneous",
-      title: "Sudoku Solver",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      title: "Robotic Arm",
+      desc: "ROS package to simulate and control a simple Robotic Arm.",
+      link1: "https://github.com/Sakshi-1606/Robotic_Arm",
       imgSrc: githubLogo,
       alt: "Github Logo",
-      imgSrc1: liveLogo,
-      alt1: "LiveDemo Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
+      ts1: python,
+      wts1: "python",
+      ts2: ros,
+      wts2: "ros",
+      ts3: tkinter,
+      wts3: "tkinter"
     },
     {
       id: "miscellaneous",
       title: "Deep Dive",
       desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      link1: "https://github.com/Nithin1729S/Deep-Dive-A-System-Resource-Monitor",
+      link2: "https://youtu.be/HifIpIcRB0k",
       imgSrc: githubLogo,
       alt: "Github Logo",
       imgSrc1: liveLogo,
       alt1: "LiveDemo Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
+      ts1: python,
+      wts1: "python",
     },
     {
       id: "miscellaneous",
       title: "C Compiler",
-      desc: "An app that helps you locate profs during working hours",
-      link1: "https://github.com/Nithin1729S/Inkwell-Insights-A-Blogging-Website",
-      link2: "https://inkwell-insights-a-blogging-website.onrender.com",
+      desc: "C Compiler using Lex, Yacc and Python",
+      link1: "https://github.com/Nithin1729S/C-Compiler-Phases",
       imgSrc: githubLogo,
       alt: "Github Logo",
-      imgSrc1: liveLogo,
-      alt1: "LiveDemo Logo",
-      ts1: androidFull,
-      wts1: "android",
-      ts2: java,
-      wts2: "java",
-      ts3: firebase,
-      wts3: "firebase"
+      ts1: c,
+      wts1: "c",
+      ts2: python,
+      wts2: "python",
     },
 
 

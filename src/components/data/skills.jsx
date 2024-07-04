@@ -1,42 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import githubLogo from '../images/github-logo.png';
-import liveLogo from '../images/live.png';
-import androidFull from '../images/androidFull.png';
-import java from '../images/java.png';
+import java from '../images/java.svg';
 import oops from '../images/oops.png';
-import firebase from '../images/firebase_google.png';
-import tailwind from '../images/tailwind.png';
+import firebase from '../images/firebase.svg';
+import tailwind from '../images/tailwind.svg';
+import linux from '../images/linux.svg';
 import cpp from '../images/cpp.png';
 import c from '../images/c.png';
-import streamlit from '../images/streamlit.png'
-import python2 from '../images/python2.png';
-import javascript from '../images/javascript.png';
-import typescript from '../images/typescript.png';
-import metamask from '../images/metamask.png';
-import express from '../images/express.png';
-import postman from '../images/postman.png';
-import node from '../images/node.png';
+import streamlit from '../images/streamlit.svg'
+import api from '../images/api.png'
+import javascript from '../images/javascript.svg';
+import typescript from '../images/typescript.svg';
+import express from '../images/express.svg';
+import postman from '../images/postman.svg';
+import node from '../images/node.svg';
 import git from '../images/git.png';
 import github from '../images/github.png';
-import mysql from '../images/mysql.png';
-import html2 from '../images/html2.png';
-import css2 from '../images/css2.png';
-import ethereum from '../images/ethereum.png';
-import solidity from '../images/solidity.png';
-import postgresql from '../images/postgresql.png';
-import python from '../images/python.png';
-import pyTorch from '../images/pytorch.png';
+import mysql from '../images/mysql.svg';
+import html2 from '../images/html.svg';
+import css2 from '../images/css.svg';
+import ethereum from '../images/ethereum.svg';
+import solidity from '../images/solidity.svg';
+import postgresql from '../images/postgresql.svg';
+import python from '../images/python.svg';
+import pyTorch from '../images/pytorch.svg';
 import ml from '../images/ml.png';
-import django from '../images/django.png';
-import docker from '../images/docker.png';
-import auth0 from '../images/auth0.png';
-import huggingFace from '../images/huggingFace.png';
-import flask from '../images/flask.png';
-import mongodb from '../images/mongodb.png';
-import react from '../images/react.png';
-import machinelearninglogo from '../images/machine-learning.png';
-import blockchainlogo from '../images/blockchain.png';
-import idealogo from '../images/idea.png';
+import django from '../images/django.svg';
+import docker from '../images/docker.svg';
+import flask from '../images/flask.svg';
+import mongodb from '../images/mongodb.svg';
+import react from '../images/react.svg';
 
 const skills = [
     {
@@ -62,6 +53,10 @@ const skills = [
     {
       title: 'Javascript',
       imgSrc: javascript
+    },
+    {
+      title: 'TypeScript',
+      imgSrc: typescript
     },
     {
       title: 'OOPS',
@@ -92,27 +87,24 @@ const skills = [
       imgSrc: css2
     },
     {
-      title: 'TailwindCSS',
+      title: 'Tailwind CSS',
       imgSrc: tailwind
     },
     {
-      title: 'MySQL',
+      title: 'SQL',
       imgSrc: mysql
     },
     {
       title: 'MongoDB',
       imgSrc: mongodb
     },
+    
     {
-      title: 'TypeScript',
-      imgSrc: typescript
-    },
-    {
-      title: 'React',
+      title: 'ReactJS',
       imgSrc: react
     },
     {
-      title: 'Express',
+      title: 'ExpressJS',
       imgSrc: express
     },
     {
@@ -126,6 +118,10 @@ const skills = [
     {
       title: 'GitHub',
       imgSrc: github
+    },
+    {
+      title: 'Linux',
+      imgSrc: linux
     },
     {
       title: 'Docker',
@@ -143,25 +139,19 @@ const skills = [
       title: 'Streamlit',
       imgSrc: streamlit
     },
+    
     {
-      title: 'Postgresql',
+      title: 'PostgreSQL',
       imgSrc: postgresql
     },
     {
-      title: 'Tensorflow',
-      imgSrc: firebase
+      title: 'API',
+      imgSrc: api
     },
     {
-      title: 'Tensorflow',
-      imgSrc: firebase
+      title: 'PyTorch',
+      imgSrc: pyTorch
     },
-    {
-      title: 'Tensorflow',
-      imgSrc: firebase
-    },
-
-
-    // Add more skills here
   ];
 
 export default skills;
