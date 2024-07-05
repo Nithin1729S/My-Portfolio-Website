@@ -9,7 +9,7 @@ function Navbar(props) {
         <ul className="nav nav-pills col col-sm-3 col-md-6 col-lg-5 justify-content-center">
           <li className="nav-item ">
           <div className='Home'>
-            <a className="nav-link link-dark" href={"/"}>
+            <a className="nav-link link-dark" href={"https://drive.google.com/file/d/1H7ZaD7siI3BBSeEX08JqgOf1RNmICwZw/view?usp=sharing"}>
               <span className="border border-dark transition duration-300 ease-in-out hover:border-gray-700 hover:text-white hover:bg-black hover:scale-105">Resume</span>
             </a>
             </div>
