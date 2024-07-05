@@ -1,5 +1,5 @@
-import githubLogo from '../images/github-logo.png';
-import liveLogo from '../images/live.png';
+import githubLogo from '../images/github.svg';
+import liveLogo from '../images/live2.svg';
 import firebase from '../images/firebase.svg';
 import tailwind from '../images/tailwind.svg';
 import c from '../images/c.png';
