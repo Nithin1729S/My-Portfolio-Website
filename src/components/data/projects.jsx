@@ -6,7 +6,7 @@ import c from '../images/c.png';
 import python2 from '../images/python.svg';
 import javascript from '../images/javascript.svg';
 import typescript from '../images/typescript.svg';
-import metamask from '../images/metamask.png';
+import metamask from '../images/metamask.svg';
 import tkinter from '../images/tkinter.png';
 import node from '../images/node.svg';
 import mysql from '../images/mysql.svg';
