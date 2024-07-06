@@ -2,7 +2,7 @@ import React from 'react';
 import gitHubLogo from '../components/images/github.svg';
 import linkedInLogo from '../components/images/linkedin.svg';
 import xLogo from '../components/images/x.svg';
-import leetcodeLogo from '../components/images/leetcode.png';
+import leetcodeLogo from '../components/images/leetcode.svg';
 import codeforcesLogo from '../components/images/cf.svg';
 import mailLogo from '../components/images/mail.svg';
 
