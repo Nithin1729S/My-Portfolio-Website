@@ -6,14 +6,14 @@ import linux from '../images/linux.svg';
 import cpp from '../images/cpp.png';
 import c from '../images/c.png';
 import streamlit from '../images/streamlit.svg'
-import api from '../images/api.png'
+import api from '../images/api.svg'
 import javascript from '../images/javascript.svg';
 import typescript from '../images/typescript.svg';
 import express from '../images/express.svg';
 import postman from '../images/postman.svg';
 import node from '../images/node.svg';
-import git from '../images/git.png';
-import github from '../images/github.png';
+import git from '../images/git.svg';
+import github from '../images/github.svg';
 import mysql from '../images/mysql.svg';
 import html2 from '../images/html.svg';
 import css2 from '../images/css.svg';
