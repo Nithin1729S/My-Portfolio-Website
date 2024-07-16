@@ -308,7 +308,7 @@ const projects = [
     {
       id: "miscellaneous",
       title: "Deep Dive",
-      desc: "An app that helps you locate profs during working hours",
+      desc: "A System resource monitoring tool for comprehensive real-time tracking and analysis of system resources",
       link1: "https://github.com/Nithin1729S/Deep-Dive-A-System-Resource-Monitor",
       link2: "https://youtu.be/HifIpIcRB0k",
       imgSrc: githubLogo,
