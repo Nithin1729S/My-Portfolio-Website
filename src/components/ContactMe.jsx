@@ -23,7 +23,7 @@ function ContactMe(props) {
           <a href="https://leetcode.com/u/sureshnithin1729/" target="_blank" rel="noreferrer">
             <img src={leetcodeLogo} alt={props.Alt} style={{ width: '32px', height: '32px' }} />
           </a>
-          <a href="https://codeforces.com/profile/sureshnithin1729" target="_blank" rel="noreferrer">
+          <a href="" target="_blank" rel="noreferrer">
             <img src={codeforcesLogo} alt={props.Alt} style={{ width: '32px', height: '32px' }} />
           </a>
           {/* <a href="https://codeforces.com/profile/sureshnithin1729" target='_blank'><img src={mediumLogo} alt={props.Alt} /></a> */}
