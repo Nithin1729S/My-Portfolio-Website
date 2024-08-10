@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from "react-dom/client";
+import { Analytics } from '@vercel/analytics/react';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from "./components/App";
 
@@ -227,5 +228,9 @@ else {
 
 
 root.render(
-  <App />
+  <>
+    <App />
+    <Analytics />
+  </>
+  
 );
