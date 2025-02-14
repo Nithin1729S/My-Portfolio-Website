@@ -4,7 +4,7 @@ This is my personal portfolio project built with React and TailwindCSS, using Vi
 
 ## Live Demo
 
-To see the website in action, visit: [https://nithins.vercel.app](https://nithins.vercel.app/)
+To see the website in action, visit: [https://nithin1729s.vercel.app](https://nithin1729s.vercel.app/)
 
 
 ## Installation
